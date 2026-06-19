@@ -1,0 +1,1182 @@
+
+
+/* ================= VARIABLES ================= */
+:root {
+    --primary-pink: #d84b7f;
+    --hover-pink: #c03968;
+    --light-pink: #fde8ef;
+    --text-dark: #333333;
+    
+    /* Colores pastel para las tarjetas de promoción */
+    --bg-yellow: #fcf6e5;
+    --bg-orange: #fdf0e7;
+    --bg-green: #eaf5eb;
+}
+
+/* ================= BASE & RESET ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden; /* Evita cualquier desbordamiento horizontal en móviles */
+    background-color: #ffffff;
+}
+
+/* ================= TYPOGRAPHY (FLUID TEXT) ================= */
+h1, .h1 {
+    font-size: calc(1.8rem + 1.5vw); /* Escala fluidamente entre móvil y desktop */
+    line-height: 1.2;
+}
+
+.script-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #6c757d;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.text-accent {
+    font-family: 'Great Vibes', cursive;
+    color: var(--primary-pink);
+    font-weight: 400;
+    font-size: 1.3em;
+    display: inline-block;
+}
+
+.text-primary-pink, .text-accent-pink {
+    color: var(--primary-pink) !important;
+}
+
+/* Ajustes tipográficos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .script-title {
+        font-size: 2.5rem;
+    }
+    body {
+        font-size: 14px; /* Base ligeramente más pequeña en móviles */
+    }
+}
+
+/* ================= COMPONENTS ================= */
+
+/* Navbar Responsivo */
+.navbar .nav-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: var(--primary-pink);
+}
+
+/* Línea indicadora activa solo en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background-color: var(--primary-pink);
+    }
+}
+
+/* Menú desplegable móvil */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        margin-top: 10px;
+        text-align: center;
+    }
+    .navbar .nav-link {
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+}
+
+.bg-primary-pink {
+    background-color: var(--primary-pink) !important;
+}
+
+/* Botones con comportamiento táctil */
+.btn-primary-pink {
+    background-color: var(--primary-pink);
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-primary-pink:hover, .btn-primary-pink:active {
+    background-color: var(--hover-pink);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* ================= SECTIONS ================= */
+
+/* --- Ajuste del Logo --- */
+.navbar {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
+
+.main-logo {
+    height: 140px !important; /* Logo grande e imponente como en Canva */
+    width: auto;
+    object-fit: contain;
+    transition: height 0.3s ease;
+}
+
+@media (max-width: 991px) {
+    .main-logo {
+        height: 85px !important; 
+    }
+}
+
+/* --- Hero Section (Contenedor de Pantalla Completa) --- */
+/* Busca esta clase y agrégale el padding-top */
+.hero-section {
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden; 
+    min-height: 85vh; 
+    display: flex;
+    align-items: center;
+    padding-top: 40px; /* <--- Agrega esto para dar un respiro superior */
+}
+
+/* Busca esta clase y agrégale el margin-top */
+.hero-text {
+    position: relative;
+    z-index: 3;
+    margin-top: 80px; /* <--- Esto empuja los textos hacia abajo librando el logo gigante */
+}
+
+/* Agrega esto al final para que en celulares no quede un hueco gigante */
+@media (max-width: 991px) {
+    .hero-text {
+        margin-top: 20px;
+    }
+}
+
+.min-vh-80 {
+    min-height: 80vh;
+}
+
+/* --- ESTILOS DEL BANNER DE FONDO COMPLETO --- */
+.hero-bg-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; /* Fuerza a la imagen a rellenar toda la sección sin deformarse */
+    object-position: right center; /* Mantiene fija la sección derecha donde está la modelo al redimensionar */
+    z-index: 1; /* Se queda al fondo de todo */
+}
+
+/* Asegura que el contenido pase por encima del banner */
+.z-3 {
+    z-index: 3 !important;
+}
+
+/* --- INDICADORES DEL CARRUSEL (Puntitos) --- */
+.carousel-indicators {
+    bottom: 20px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.carousel-indicators button.active {
+    background-color: var(--primary-pink);
+    border-color: var(--primary-pink);
+    transform: scale(1.1);
+}
+
+
+/* --- FLECHAS DEL CARRUSEL (Diseño premium) --- */
+.btn-slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--primary-pink) 0%, #c9184a 100%);
+    border-radius: 50%;
+    width: 56px; 
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 10;
+    box-shadow: 
+        0 4px 20px rgba(216, 75, 127, 0.4),
+        0 0 0 4px rgba(255, 255, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border: none;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-slider-nav::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-pink), transparent);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.btn-slider-nav:hover {
+    background: linear-gradient(135deg, #c9184a 0%, #a4133c 100%);
+    transform: translateY(-50%) scale(1.12);
+    box-shadow: 
+        0 8px 30px rgba(216, 75, 127, 0.5),
+        0 0 0 4px rgba(255, 255, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-slider-nav:hover::before {
+    opacity: 0.3;
+    animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.3); opacity: 0; }
+}
+
+/* Tamaño de los SVGs de tus flechas */
+.btn-slider-nav img {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.btn-slider-nav:hover img {
+    transform: scale(1.1);
+}
+
+/* Flechas con posición */
+.btn-slider-nav.prev { 
+    left: 30px;
+}
+.btn-slider-nav.next { 
+    right: 30px;
+}
+
+
+/* --- ADAPTACIÓN RESPONSIVA PARA TABLETS Y CELULARES --- */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    /* En pantallas móviles cambiamos la imagen para que se comporte como un bloque normal 
+       abajo del texto y no tape la lectura del celular */
+    .hero-bg-banner {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 2rem;
+        z-index: 3;
+    }
+    
+    .btn-slider-nav {
+        width: 44px;
+        height: 44px;
+        top: 35%;
+    }
+    .btn-slider-nav img {
+        width: 20px;
+        height: 20px;
+    }
+    .btn-slider-nav.prev { left: 15px; }
+    .btn-slider-nav.next { right: 15px; }
+}
+/* --- Tarjetas de Promoción --- */
+.promo-card {
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(216, 75, 127, 0.15) !important;
+}
+
+.promo-card .promo-img {
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.promo-card:hover .promo-img {
+    transform: scale(1.06);
+}
+
+.bg-light-yellow { background-color: var(--bg-yellow); }
+.bg-light-orange { background-color: var(--bg-orange); }
+.bg-light-green { background-color: var(--bg-green); }
+
+.promo-img {
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+}
+
+/* Ajuste crítico para móviles: si la pantalla es muy angosta (como un iPhone SE), 
+   el texto dentro de col-6 podría romperse o verse muy apretado. */
+@media (max-width: 425px) {
+    .promo-card .row.g-0 {
+        flex-direction: column-reverse; /* Pone la imagen arriba y el texto abajo */
+    }
+    .promo-card .col-6 {
+        width: 100% !important;
+    }
+    .promo-img {
+        height: 160px;
+    }
+}
+
+/* --- Tarjetas de Nuestros Servicios --- */
+.service-card {
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+}
+
+.service-card:hover {
+    box-shadow: 0 25px 50px rgba(216, 75, 127, 0.2) !important;
+    transform: translateY(-10px);
+}
+
+.service-card .card-img-top {
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+/* Ajuste de altura de imagen en pantallas medianas o tablets */
+@media (max-width: 768px) {
+    .service-card .card-img-top {
+        height: 200px;
+    }
+}
+
+.heart-btn {
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.heart-btn:hover {
+    transform: scale(1.25);
+}
+.heart-btn:active {
+    transform: scale(0.9);
+}
+
+/* --- Banner de Estadísticas (Stats) - AGRANDADO --- */
+.stats-banner {
+    background-color: var(--light-pink);
+    width: auto;
+    max-width: 100%;
+    padding: 28px 50px !important;
+    gap: 60px !important;
+    position: relative;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stats-banner .d-flex {
+    gap: 16px !important;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stats-banner .stats-icon {
+    width: 40px !important;
+    height: 40px;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stats-banner:hover .stats-icon {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.15);
+}
+
+.stats-banner:hover {
+    transform: scale(1.02);
+}
+
+.stats-banner strong {
+    font-size: 1.5rem !important;
+    transition: all 0.5s ease;
+}
+
+.stats-banner small {
+    font-size: 0.9rem !important;
+}
+
+/* En móviles, el diseño ovalado ("rounded-pill") puede deformarse si los elementos se apilan.
+   Cambiamos a bordes curvos normales si la pantalla es pequeña. */
+@media (max-width: 767.98px) {
+    .stats-banner {
+        border-radius: 25px !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding: 30px 25px !important;
+        width: 90%;
+        gap: 25px !important;
+    }
+    .stats-banner .vr {
+        display: none;
+    }
+    .stats-banner .d-flex {
+        gap: 12px !important;
+    }
+    .stats-banner .stats-icon {
+        width: 36px !important;
+        height: 36px;
+    }
+    .stats-banner strong {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* --- Galería de Trabajos --- */
+
+
+.gallery-img {
+    object-fit: cover;
+    object-position: center top;
+    cursor: pointer;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 20px 45px rgba(216, 75, 127, 0.18);
+}
+
+/* Fuerza a que las imágenes altas sean siempre rectángulos tipo retrato */
+.img-tall {
+    aspect-ratio: 3 / 4.5;
+}
+
+/* Fuerza a que las imágenes apiladas sean rectangulares horizontales */
+.img-half {
+    /* 2.15 compensa matemáticamente el espacio (gap) para que queden alineadas abajo */
+    aspect-ratio: 3 / 2.15; 
+}
+
+/* En celulares relajamos las reglas para que se vean bien al apilarse */
+@media (max-width: 991px) {
+    .img-tall {
+        aspect-ratio: 3 / 4;
+    }
+    .img-half {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+/* --- Banner de Estadísticas unificado arriba --- */
+
+.custom-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Separación entre el icono y las líneas */
+}
+
+.custom-divider .line {
+    display: block;
+    width: 70px; /* Qué tan larga quieres que sea la línea */
+    height: 1.5px; /* El grosor de la línea */
+    background-color: var(--primary-pink); /* Color de la línea (rosado) */
+    border-radius: 2px;
+}
+
+.custom-divider img {
+    width: 28px; /* Tamaño del icono del medio */
+    height: auto;
+    object-fit: contain;
+}
+/* ==========================================================================
+   PÁGINA DE SERVICIOS 
+   ========================================================================== */
+
+/* --- Buscador --- */
+.search-container {
+    width: 100%;
+    max-width: 550px;
+}
+
+.search-input {
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    font-size: 0.95rem;
+}
+
+.search-input:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 0.25rem rgba(216, 75, 127, 0.25);
+}
+
+.search-icon {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    opacity: 0.6;
+}
+
+/* ============================================================
+   SEARCH MODAL
+   ============================================================ */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.search-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.search-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.search-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 90%;
+    max-width: 550px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+}
+
+.search-modal.active .search-modal-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.search-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 28px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.search-modal-header h5 {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.search-modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-modal-close:hover {
+    background-color: #f5f5f5;
+}
+
+.search-modal-body {
+    padding: 28px;
+}
+
+.search-icon-modal {
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    opacity: 0.4;
+}
+
+.search-input-modal {
+    border: 2px solid #eee;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+}
+
+.search-input-modal:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 4px rgba(216, 75, 127, 0.1);
+}
+
+.search-suggestion-tag {
+    background-color: var(--light-pink);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.search-suggestion-tag:hover {
+    background-color: var(--primary-pink);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(216, 75, 127, 0.3);
+}
+
+.search-result-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.search-result-item:hover {
+    background-color: var(--light-pink);
+}
+
+.search-results-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* ============================================================
+   SERVICE DETAIL MODAL
+   ============================================================ */
+.service-detail-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.service-detail-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.detail-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.detail-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 95%;
+    max-width: 900px;
+    max-height: 90vh;
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-detail-modal.active .detail-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.detail-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.detail-close:hover {
+    background-color: #f5f5f5;
+    transform: rotate(90deg);
+}
+
+.detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.detail-body {
+    padding: 40px;
+}
+
+.detail-info {
+    background-color: var(--light-pink);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.detail-features .border-top {
+    border-color: #eee !important;
+}
+
+@media (max-width: 768px) {
+    .detail-content {
+        width: 95%;
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+    
+    .detail-img {
+        min-height: 250px;
+    }
+    
+    .detail-body {
+        padding: 25px;
+    }
+}
+
+/* --- Filtros (Pills) - MÁS GRANDES --- */
+.filter-pill {
+    background-color: #f7eef2;
+    color: var(--text-dark);
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.filter-pill img {
+    width: 20px !important;
+    height: 20px;
+}
+
+.filter-pill:hover {
+    background-color: #f0d8e2;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(216, 75, 127, 0.2);
+}
+
+.filter-pill.active {
+    background-color: var(--primary-pink);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(216, 75, 127, 0.35);
+}
+
+.filter-pill.active img {
+    filter: brightness(0) invert(1);
+}
+
+/* --- Caja de Reserva (How To) --- */
+.reservation-guide {
+    border: 1.5px solid var(--primary-pink);
+    border-radius: 20px;
+    max-width: 1100px;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+}
+
+.res-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 140px;
+}
+
+.res-icon-box {
+    width: 75px;
+    height: 75px;
+    border: 1.5px solid var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.res-icon-box img {
+    width: 32px;
+    height: auto;
+}
+
+/* Pequeño efecto al pasar el mouse por los pasos */
+.res-step:hover .res-icon-box {
+    transform: translateY(-5px);
+    border-color: var(--primary-pink);
+}
+
+/* En móviles, apilamos los pasos y ocultamos las flechas horizontales */
+@media (max-width: 991px) {
+    .res-step {
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+    .reservation-guide {
+        padding: 3rem 1rem 1rem 1rem;
+    }
+}
+
+/* ============================================================
+   ANIMACIONES FLUIDAS Y SUAVES
+   ============================================================ */
+
+/* Animación lenta de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animación de entrada muy lenta para tarjetas */
+.service-card,
+.promo-card,
+.course-card {
+    animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Botones con transición muy lenta y suave */
+.btn-primary-pink {
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary-pink::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.8s ease, height 0.8s ease;
+}
+
+.btn-primary-pink:hover::before {
+    width: 400%;
+    height: 400%;
+}
+
+.btn-primary-pink:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(216, 75, 127, 0.4);
+}
+
+.btn-primary-pink:active {
+    transform: translateY(-1px);
+    transition: all 0.15s ease;
+}
+
+/* Transiciones lentas en todos los elementos */
+a, button, .card, img {
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Filter pills con efecto ripple lento */
+.filter-pill {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.filter-pill::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(216, 75, 127, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.7s ease, height 0.7s ease;
+}
+
+.filter-pill:hover::after {
+    width: 350%;
+    height: 350%;
+}
+
+/* Footer links con underline animado lento */
+footer a {
+    position: relative;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-pink);
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* Nav links con transición suave */
+.navbar .nav-link {
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-pink);
+    transform: translateY(-2px);
+}
+
+/* Soporte para movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================
+   ESTILOS DE CURSOS
+   ============================================================ */
+
+/* --- Tarjetas de Cursos (Horizontales) --- */
+.course-card {
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(216, 75, 127, 0.15) !important;
+}
+
+/* Imagen a la izquierda */
+.course-img {
+    object-fit: cover;
+    object-position: center;
+    min-height: 280px;
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.course-card:hover .course-img {
+    transform: scale(1.05);
+}
+
+/* Lista con Iconos (Checks) */
+.course-list li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Barra de información rosada (Duración, Modalidad, Cupos) - MÁS GRANDE */
+.course-info-bar {
+    background-color: var(--light-pink);
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    transition: all 0.5s ease;
+    padding: 16px 20px !important;
+    border-radius: 50px !important;
+}
+
+.course-info-bar img {
+    width: 24px !important;
+    height: auto;
+}
+
+.course-info-bar .vr {
+    width: 1px;
+    height: 40px;
+}
+
+.course-info-bar .lh-1 {
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 767.98px) {
+    .course-card .row.g-0 {
+        flex-direction: column;
+    }
+    
+    .course-img {
+        border-radius: 1rem 1rem 0 0 !important;
+        min-height: 200px;
+    }
+    
+    .course-info-bar {
+        flex-wrap: wrap;
+        border-radius: 16px !important;
+        padding: 14px !important;
+        gap: 12px;
+        justify-content: center !important;
+    }
+    
+    .course-info-bar .vr {
+        display: none;
+    }
+    
+    .course-info-bar .lh-1 {
+        font-size: 0.75rem !important;
+    }
+}
+/* ==========================================================================
+   PÁGINA DE CONTÁCTANOS (STYLES ESPECÍFICOS)
+   ========================================================================== */
+
+/* --- Mapa de Google --- */
+.map-container {
+    background-color: #f8f9fa;
+    /* En computadoras, se estira para igualar la altura del formulario */
+    min-height: 450px; 
+}
+
+/* --- Formulario de Contacto --- */
+.custom-input {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Cambiar el color del texto falso (placeholder) a un gris claro sutil */
+.custom-input::placeholder {
+    color: #b5b5b5;
+    font-weight: 400;
+}
+
+/* Efecto al hacer clic (focus) en los campos */
+.custom-input:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 0.2rem rgba(216, 75, 127, 0.15);
+}
+
+/* Botón de Enviar (Ajuste para redondear un poco menos según tu diseño) */
+.contact-form .btn-primary-pink {
+    border-radius: 8px !important;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-form .btn-primary-pink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(216, 75, 127, 0.2);
+}
+
+/* Adaptación Responsiva para móviles */
+@media (max-width: 991px) {
+    .map-container {
+        min-height: 350px; /* Un poco más pequeño en celulares */
+        margin-bottom: 2rem;
+    }
+}

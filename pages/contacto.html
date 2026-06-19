@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - JM Beauty Studio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container-fluid px-4 px-xl-5">
+            <!-- Logo -->
+            <a class="navbar-brand me-lg-5" href="../index.html">
+                <img src="../img/logo_sinFondo2.png" alt="JM Beauty Studio Logo" class="main-logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                    <!-- La clase 'active' ahora está en Contáctanos -->
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-4 ms-lg-5">
+                <a href="#" class="icon-link"><img src="../icons/search.svg" alt="Buscar" width="24"></a>
+                <a href="servicios.html" class="icon-link position-relative">
+                    <img src="../icons/shopping-bag.svg" alt="Carrito" width="24">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= SECCIÓN DE CONTACTO ================= -->
+    <main class="container py-5">
+        
+        <!-- Título Central -->
+        <div class="text-center mb-5">
+            <h1 class="script-title m-0 text-dark" style="font-size: 4.5rem;">Contactanos</h1>
+            
+            <div class="custom-divider my-3">
+                <span class="line"></span>
+                <img src="../icons/plant-2.png" alt="Decoración">
+                <span class="line"></span>
+            </div>
+
+            <h5 class="fw-bold mt-4">Estamos aquí para ayudarte</h5>
+            <p class="text-muted fs-6 mx-auto" style="max-width: 500px;">
+                Reserva tu cita sobre nuestros servicios, cursos o promociones. Será un placer atenderte.
+            </p>
+        </div>
+
+        <!-- Fila: Mapa y Formulario -->
+        <div class="row g-5 align-items-stretch mb-5">
+            
+            <!-- Columna Izquierda: Mapa de Google -->
+            <div class="col-lg-6">
+                <!-- Iframe configurado en Cochabamba, zona Laguna Alalay como en tu diseño -->
+                <div class="map-container h-100 w-100 rounded-3 overflow-hidden shadow-sm border">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15228.406326084478!2d-66.1475143!3d-17.4070058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3738e4dfaf75b%3A0x8e82647c0a9df000!2sCircuito%20Bolivia%2C%20Cochabamba!5e0!3m2!1ses!2sbo!4v1716301234567!5m2!1ses!2sbo" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 450px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario -->
+            <div class="col-lg-6">
+                <h6 class="text-primary-pink fw-bold mb-4 fs-5">FORMULARIO</h6>
+                
+                <form action="#" method="POST" class="contact-form d-flex flex-column gap-3">
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control custom-input" placeholder="Nombre Completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" class="form-control custom-input" placeholder="Correo Electrónico" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" class="form-control custom-input" placeholder="Teléfono" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control custom-input" rows="5" placeholder="Mensaje" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary-pink w-100 py-3 mt-2 fs-5 fw-semibold d-flex justify-content-center align-items-center gap-2 rounded-3">
+                        Enviar Mensaje
+                        <!-- Icono de Enviar (Avión de papel) simulado con SVG -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 text-center text-lg-start">
+          <img src="../img/logo_sinfondo.png" alt="JM Beauty Studio" height="60" class="mb-3">
+          <p class="small text-light text-opacity-75">Un maquillaje elegante y duradero para uno de los días más
+            importantes de tu vida, resaltando tu belleza y cuidando tu piel.</p>
+        </div>
+        <div class="col-md-4 col-lg-2 offset-lg-1">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Empresa</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Sobre Nosotros</a></li>
+            <li class="mb-2"><a href="pages/servicios.html" class="text-decoration-none text-reset">Servicios</a></li>
+            <li class="mb-2"><a href="pages/contacto.html" class="text-decoration-none text-reset">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Servicios</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Maquillaje Profesional</a></li>
+            <li class="mb-2"><a href="pages/cursos.html" class="text-decoration-none text-reset">Cursos de
+                Maquillaje</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Contacto</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2">
+              <a href="https://wa.link/m07nyh" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-whatsapp.png" width="16"> WhatsApp
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://instagram.com/jesica.mv?utm_medium=copy_link" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-instagram.png" width="16"> @jesica.mv
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.facebook.com/profile.php?id=100063662254701&mibextid=ZbWKwL" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-facebook.png" width="16"> JM Beauty Studio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.tiktok.com/@jesicamaldonadovi?_r=1&_d=e9ch06hjajgd5d&sec_uid=MS4wLjABAAAAwfhLDTpkfOn9w7DVdb7ZZUInFa0IKNPqFJbT5GC9tjhcbk9o9WjH1-ylH2RcOk3U&share_author_id=6752818319429092358&sharer_language=es&source=h5_m&u_code=d9363kafc7ajc1&timestamp=1716512307&user_id=6752818319429092358&sec_user_id=MS4wLjABAAAAwfhLDTpkfOn9w7DVdb7ZZUInFa0IKNPqFJbT5GC9tjhcbk9o9WjH1-ylH2RcOk3U&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7357315069569402630&share_link_id=24582e6d-697c-4ae3-af0d-adf76ae5c140&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-tiktok (1).svg" width="16"> @jesicamaldonadovi
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="mailto:jmv.beauty1@gmail.com"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/mail-opened_icon.png" width="16"> jmv.beauty1@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <div class="row small text-light text-opacity-50">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          © 2026 M Beauty Studio. Todos los Derechos Reservados.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          Localidad Cochabamba
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

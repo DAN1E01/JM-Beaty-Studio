@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - JM Beauty Studio</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom CSS (Nota el ../ para salir de la carpeta pages) -->
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container-fluid px-4 px-xl-5">
+      <!-- Logo -->
+      <a class="navbar-brand me-lg-5" href="../index.html">
+        <img src="../img/logo_sinFondo2.png" alt="JM Beauty Studio Logo" class="main-logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <!-- La clase 'active' ahora está en Servicios -->
+          <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center gap-4 ms-lg-5">
+        <a href="#" class="icon-link search-trigger" aria-label="Buscar">
+          <img src="../icons/search.svg" alt="Buscar" width="24">
+        </a>
+        <a href="#" class="icon-link position-relative" id="btn-abrir-carrito" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+          <img src="../icons/shopping-bag.svg" alt="Carrito" width="24">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-pink" id="carrito-badge" style="display:none;">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+  <main class="container-fluid px-4 px-xl-5 py-5 bg-white">
+
+    <!-- Buscador -->
+    <div class="d-flex justify-content-center mb-5">
+      <div class="position-relative search-container">
+        <img src="../icons/search.svg" alt="Buscar" class="position-absolute search-icon">
+        <input type="text" class="form-control rounded-pill ps-5 py-2 search-input" placeholder="Escribe Algo...">
+      </div>
+    </div>
+
+    <!-- Título de Sección -->
+    <div class="text-center mb-5">
+      <h2 class="script-title m-0">Nuestros</h2>
+      <h3 class="h4 text-uppercase fw-bold mb-3 text-primary-pink">Servicios</h3>
+
+      <div class="custom-divider">
+        <span class="line"></span>
+        <img src="../icons/plant-2.png" alt="Decoración">
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <!-- Filtros (Pills) -->
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+      <button class="filter-pill active"><img src="../icons/border-all.svg" width="16"> Todas</button>
+      <button class="filter-pill"><img src="../icons/spray.svg" width="16"> Maquillaje</button>
+      <button class="filter-pill"><img src="../icons/scissors.svg" width="16"> Peinados</button>
+      <button class="filter-pill"><img src="../icons/glass-champagne.svg" width="16"> Novias</button>
+      <button class="filter-pill"><img src="../icons/gift.svg" width="16"> Quinceañeras</button>
+      <button class="filter-pill"><img src="../icons/persons.png" width="16"> Sociales</button>
+    </div>
+
+    <!-- GRID DE SERVICIOS (Fila 1) -->
+    <div class="row g-4 justify-content-center mb-5">
+      <!-- Tarjeta 1 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/novia_maqui.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Profesional">
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">⭐
+              Popular</span>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Maquillaje Profesional</h6>
+            <p class="small text-muted mb-3 lh-sm">Resalta tu belleza con maquillaje para cualquier ocasión especial</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 90
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 180</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-001" data-nombre="Maquillaje Profesional" data-precio="180" data-duracion="90">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/servicio_social.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Social">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Maquillaje Social</h6>
+            <p class="small text-muted mb-3 lh-sm">Ideal para eventos, fiestas y ocasiones especiales</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 60
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 120</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-002" data-nombre="Maquillaje Social" data-precio="120" data-duracion="60">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/servicio_quinceañera.jpg" class="card-img-top rounded-top-4" alt="Quinceañeras">
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">👑
+              Especial</span>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Maquillaje Quinceañeras</h6>
+            <p class="small text-muted mb-3 lh-sm">Un look espectacular para tu día especial</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 90
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 150</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-003" data-nombre="Maquillaje Quinceañeras" data-precio="150" data-duracion="90">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/servicios_mopdernos.jpg" class="card-img-top rounded-top-4" alt="Peinado Social">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Peinado Social</h6>
+            <p class="small text-muted mb-3 lh-sm">Peinados modernos y elegantes para cualquier ocasión</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 60
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 100</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-004" data-nombre="Peinado Social" data-precio="100" data-duracion="60">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRID DE SERVICIOS (Fila 2) -->
+    <div class="row g-4 justify-content-center mb-5">
+      <!-- Tarjeta 5 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/Peinados.jpeg" class="card-img-top rounded-top-4" alt="Maquillaje Novia">
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">💍
+              Novia</span>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Maquillaje de Novia</h6>
+            <p class="small text-muted mb-3 lh-sm">El look perfecto para tu día más especial</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 120
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 350</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-005" data-nombre="Maquillaje de Novia" data-precio="350" data-duracion="120">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/lavado_cabello.jpg" class="card-img-top rounded-top-4" alt="Peinado Novia">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Peinado de Novia</h6>
+            <p class="small text-muted mb-3 lh-sm">Un peinado elegante y duradero para tu boda</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 90
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 250</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-006" data-nombre="Peinado de Novia" data-precio="250" data-duracion="90">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 7 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/preparacion_piel.jpg" class="card-img-top rounded-top-4" alt="Preparación de Piel">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Preparación de Piel</h6>
+            <p class="small text-muted mb-3 lh-sm">Tratamiento facial para una piel radiante</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 60
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 80</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-007" data-nombre="Preparación de Piel" data-precio="80" data-duracion="60">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 8 -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="position-relative">
+            <img src="../img/MaquillajeProfesional.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Editorial">
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">✨
+              Nuevo</span>
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <img src="../icons/heart.svg" width="16" alt="Favorito">
+            </button>
+          </div>
+          <div class="card-body text-start">
+            <h6 class="fw-bold mb-1">Maquillaje Editorial</h6>
+            <p class="small text-muted mb-3 lh-sm">Para sesiones fotográficas y eventos especiales</p>
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <small class="text-muted fw-semibold"><img src="../icons/clock-hour-11.png" width="14" class="me-1"> 90
+                Minutos</small>
+              <div class="text-end">
+                <small class="text-muted d-block lh-1" style="font-size: 0.65rem;">Desde:</small>
+                <span class="fw-bold text-primary-pink">Bs. 200</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
+              data-id="srv-008" data-nombre="Maquillaje Editorial" data-precio="200" data-duracion="90">
+              <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
+              Agendar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SECCIÓN ¿CÓMO SE RESERVA? ================= -->
+    <section class="reservation-guide mt-5 mb-5 mx-auto">
+      <h4 class="text-center fw-bold mb-5 mt-2">¿COMO SE RESERVA?</h4>
+
+      <div
+        class="d-flex flex-column flex-lg-row justify-content-between align-items-center text-center px-4 pb-4 position-relative">
+
+        <!-- Step 1 -->
+        <div class="res-step">
+          <div class="res-icon-box">
+            <img src="../icons/calendar-plus.svg" alt="Paso 1">
+          </div>
+          <span class="fw-bold d-block mt-2">1</span>
+          <small class="text-muted">Elige tu servicio y<br>fecha</small>
+        </div>
+
+        <div class="res-arrow d-none d-lg-block"><svg width="40" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="var(--primary-pink)" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></div>
+
+        <!-- Step 2 -->
+        <div class="res-step">
+          <div class="res-icon-box">
+            <img src="../icons/clock-hour-11.png" alt="Paso 2">
+          </div>
+          <span class="fw-bold d-block mt-2">2</span>
+          <small class="text-muted">Selecciona tu hora<br>disponible</small>
+        </div>
+
+        <div class="res-arrow d-none d-lg-block"><svg width="40" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="var(--primary-pink)" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></div>
+
+        <!-- Step 3 -->
+        <div class="res-step">
+          <div class="res-icon-box">
+            <img src="../icons/cash.svg" alt="Paso 3">
+          </div>
+          <span class="fw-bold d-block mt-2">3</span>
+          <small class="text-muted">Realiza el pago del<br>anticipo</small>
+        </div>
+
+        <div class="res-arrow d-none d-lg-block"><svg width="40" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="var(--primary-pink)" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></div>
+
+        <!-- Step 4 -->
+        <div class="res-step">
+          <div class="res-icon-box">
+            <img src="../icons/ticket.svg" alt="Paso 4">
+          </div>
+          <span class="fw-bold d-block mt-2">4</span>
+          <small class="text-muted">Envía tu comprobante<br>y confirma la reserva</small>
+        </div>
+
+        <div class="res-arrow d-none d-lg-block"><svg width="40" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="var(--primary-pink)" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></div>
+
+        <!-- Step 5 -->
+        <div class="res-step">
+          <div class="res-icon-box">
+            <img src="../icons/clipboard-check.svg" alt="Paso 5">
+          </div>
+          <span class="fw-bold d-block mt-2">5</span>
+          <small class="text-muted">Recibe tu código y<br>confirmación</small>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 text-center text-lg-start">
+          <img src="../img/logo_sinfondo.png" alt="JM Beauty Studio" height="60" class="mb-3">
+          <p class="small text-light text-opacity-75">Un maquillaje elegante y duradero para uno de los días más
+            importantes de tu vida, resaltando tu belleza y cuidando tu piel.</p>
+        </div>
+        <div class="col-md-4 col-lg-2 offset-lg-1">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Empresa</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Sobre Nosotros</a></li>
+            <li class="mb-2"><a href="pages/servicios.html" class="text-decoration-none text-reset">Servicios</a></li>
+            <li class="mb-2"><a href="pages/contacto.html" class="text-decoration-none text-reset">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Servicios</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Maquillaje Profesional</a></li>
+            <li class="mb-2"><a href="pages/cursos.html" class="text-decoration-none text-reset">Cursos de
+                Maquillaje</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Contacto</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2">
+              <a href="https://wa.link/m07nyh" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-whatsapp.png" width="16"> WhatsApp
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://instagram.com/jesica.mv?utm_medium=copy_link" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-instagram.png" width="16"> @jesica.mv
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.facebook.com/profile.php?id=100063662254701&mibextid=ZbWKwL" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-facebook.png" width="16"> JM Beauty Studio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.tiktok.com/@jesicamaldonadovi" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/brand-tiktok (1).svg" width="16"> @jesicamaldonadovi
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="mailto:jmv.beauty1@gmail.com"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="../icons/mail-opened_icon.png" width="16"> jmv.beauty1@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <div class="row small text-light text-opacity-50">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          © 2026 M Beauty Studio. Todos los Derechos Reservados.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          Localidad Cochabamba
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Modal Carrito de Servicios -->
+<div class="modal fade" id="modalCarrito" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Tu Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carrito-vacio" class="text-center text-muted py-4">
+          <img src="../icons/shopping-bag.svg" alt="Carrito" width="48" class="mb-3 opacity-50">
+          <p class="mb-0">Tu carrito está vacío</p>
+        </div>
+        <div id="carrito-lista"></div>
+        <div id="carrito-resumen" class="d-none border-top pt-3 mt-3">
+          <div class="d-flex justify-content-between mb-2">
+            <span>Duración total</span>
+            <strong id="carrito-duracion">0 min</strong>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>Total a pagar</span>
+            <strong class="text-primary-pink" id="carrito-total">Bs. 0</strong>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Seguir viendo</button>
+        <button type="button" class="btn btn-primary-pink rounded-pill" id="btn-continuar-reserva" disabled>Continuar a reservar →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Reserva: Calendario + Datos -->
+<!-- Modal Reserva: Calendario + Datos -->
+<div class="modal fade" id="modalReserva" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <div>
+          <h5 class="modal-title fw-bold mb-0">Reservar tu turno</h5>
+          <small class="text-muted" id="reserva-subtitulo"></small>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- PASO 1: Calendario -->
+        <div id="reserva-paso-1">
+          <div id="calendario-container"></div>
+          <p class="text-center text-muted small mt-3">Los horarios en gris ya están reservados.</p>
+        </div>
+
+        <!-- PASO 2: Datos del cliente -->
+        <div id="reserva-paso-2" class="d-none">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Nombre completo *</label>
+            <input type="text" class="form-control rounded-pill px-3" id="inp-nombre-cliente" placeholder="Tu nombre y apellido">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Teléfono / WhatsApp *</label>
+            <input type="tel" class="form-control rounded-pill px-3" id="inp-telefono-cliente" placeholder="+591 XXXXXXXX">
+          </div>
+          <div class="bg-light rounded-4 p-3 mb-3" id="resumen-reserva"></div>
+          <div id="errores-reserva" class="alert alert-danger d-none"></div>
+        </div>
+
+        <!-- PASO 3: Confirmación + QR -->
+        <div id="reserva-paso-3" class="d-none text-center">
+          <div id="confirmacion-contenido"></div>
+        </div>
+
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-secondary rounded-pill" id="btn-volver-reserva">← Volver</button>
+        <button type="button" class="btn btn-primary-pink rounded-pill" id="btn-siguiente-reserva">Continuar →</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script>
+    // Al cargar servicios, verificar si viene del index con carrito de promociones
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const promosData = sessionStorage.getItem('carritoPromosFromIndex');
+        if (promosData) {
+          try {
+            const promos = JSON.parse(promosData);
+            promos.forEach(promo => {
+              // Verificar si ya está en el carrito
+              const yaExiste = carritoServicios.some(s => s.id === promo.id);
+              if (!yaExiste) {
+                // Agregar directamente al carrito sin usar el botón
+                carritoServicios.push({
+                  id: promo.id,
+                  nombre: promo.nombre,
+                  precio: promo.precio,
+                  duracion: promo.duracion
+                });
+              }
+            });
+            // Actualizar la vista del carrito
+            if (typeof actualizarVistaCarrito === 'function') {
+              actualizarVistaCarrito();
+            }
+            sessionStorage.removeItem('carritoPromosFromIndex');
+          } catch(e) {
+            console.error('Error al procesar promociones:', e);
+          }
+        }
+      }, 100);
+    });
+  </script>
+  
+</body>
+
+</html>

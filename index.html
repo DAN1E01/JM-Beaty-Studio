@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JM Beauty Studio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top py-3">
+    <!-- Cambiado a container-fluid para ocupar todo el ancho -->
+    <div class="container-fluid px-4 px-xl-5">
+      <!-- Logo con tu imagen logo_sinFondo2.png -->
+      <a class="navbar-brand me-lg-5" href="index.html">
+        <img src="img/logo_sinFondo2.png" alt="JM Beauty Studio Logo" class="main-logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center gap-4 ms-lg-5">
+        <a href="javascript:void(0)" class="icon-link"><img src="icons/search.svg" alt="Buscar" width="24"></a>
+        <a href="javascript:void(0)" class="icon-link position-relative" data-bs-toggle="modal" data-bs-target="#modalCarritoPromos">
+          <img src="icons/shopping-bag.svg" alt="Carrito" width="24">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary-pink" id="carrito-badge-promos" style="display:none;">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION (CARRUSEL) ================= -->
+  <header class="hero-section position-relative">
+
+    <!-- Carrusel de Fondo animado -->
+    <div id="heroCarousel" class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 z-1"
+      data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner w-100 h-100">
+        <!-- Imagen 1 -->
+        <div class="carousel-item active w-100 h-100">
+          <img src="img/hero_sin_fondo.png" alt="Banner 1" class="hero-bg-banner">
+        </div>
+        <!-- Imagen 2 -->
+        <div class="carousel-item w-100 h-100">
+          <img src="img/hero_carrousel.png" alt="Banner 2" class="hero-bg-banner">
+        </div>
+        <!-- Imagen 3 -->
+        <div class="carousel-item w-100 h-100">
+          <img src="img/hero_carrousel2.png" alt="Banner 3" class="hero-bg-banner">
+        </div>
+      </div>
+      <!-- Indicadores del carrusel -->
+      <div class="carousel-indicators position-absolute bottom-0 start-50 translate-middle-x mb-4">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
+    <!-- Botones del carrusel -->
+    <button class="btn btn-slider-nav prev d-none d-md-flex" type="button" data-bs-target="#heroCarousel"
+      data-bs-slide="prev">
+      <img src="icons/left_arrow.svg" alt="Anterior">
+    </button>
+    <button class="btn btn-slider-nav next d-none d-md-flex" type="button" data-bs-target="#heroCarousel"
+      data-bs-slide="next">
+      <img src="icons/right-arrow.svg" alt="Siguiente">
+    </button>
+
+    <!-- Contenido de Texto -->
+    <div class="container-fluid px-4 px-xl-5 position-relative z-2">
+      <div class="row align-items-center min-vh-80">
+        <div class="col-lg-6 hero-text text-center text-lg-start ps-lg-5">
+          <h6 class="text-primary-pink text-uppercase fw-bold mb-3 mt-4 mt-lg-0">Tu Belleza Nuestra Pasión</h6>
+          <h1 class="display-4 fw-bold mb-3">Resalta tu Belleza,<br> realza tu <span class="text-accent">esencia</span>
+          </h1>
+          <p class="mb-4 text-muted fs-5">Descubre tratamientos y productos profesionales para el cuidado de tu piel y
+            aprende en nuestros cursos.</p>
+
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-5">
+            <a href="pages/servicios.html" class="btn btn-primary-pink rounded-pill px-4 py-3 shadow-sm">
+              <img src="icons/calendar-plus.svg" alt="" width="20" class="me-2"> Reserva tu cita
+            </a>
+            <a href="pages/servicios.html" class="btn btn-outline-dark rounded-pill px-4 py-3 bg-white">
+              <img src="icons/makeup.png" alt="" width="20" class="me-2"> Ver Servicios
+            </a>
+          </div>
+
+          <div class="row features-mini text-start mt-4">
+            <div class="col-sm-4 d-flex align-items-center gap-3 mb-3 mb-sm-0">
+              <img src="icons/medal-2.svg" alt="Productos" width="35">
+              <small class="fw-semibold lh-sm">Productos<br>Profesionales</small>
+            </div>
+            <div class="col-sm-4 d-flex align-items-center gap-3 mb-3 mb-sm-0">
+              <img src="icons/shield-half.svg" alt="Seguros" width="35">
+              <small class="fw-semibold lh-sm">Seguros y<br>Confiables</small>
+            </div>
+            <div class="col-sm-4 d-flex align-items-center gap-3">
+              <img src="icons/headphones.svg" alt="Asesoria" width="35">
+              <small class="fw-semibold lh-sm">Asesoría<br>Personalizada</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-none d-lg-block"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="promotions py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="h1 fw-bold">Servicios en <span class="text-accent-pink">Promoción</span></h2>
+      <p class="text-muted mb-5">Descubre todo lo que tenemos para realzar tu belleza</p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden">
+            <div class="row g-0 h-100 bg-light-yellow">
+              <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
+                <div>
+                  <img src="icons/Hair-Dryer--Streamline-Flex.png" alt="Icon" width="30" class="mb-2">
+                  <h5 class="fw-bold">Maquillaje Profesional</h5>
+                  <p class="small text-muted mb-1">Resalta tu belleza con maquillaje para cualquier ocasión especial</p>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-decoration-line-through text-muted small">Bs. 150</span>
+                    <span class="fw-bold text-danger">Bs. 120</span>
+                  </div>
+                  <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 90
+                    Minutos</small>
+                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="srv-001" data-nombre="Maquillaje Profesional" data-precio="120" data-duracion="90">Reserva tu cita</button>
+                </div>
+              </div>
+              <div class="col-6 promo-img" style="background-image: url('img/PeinadosSinFondo.png');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden">
+            <div class="row g-0 h-100 bg-light-orange">
+              <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
+                <div>
+                  <img src="icons/Eyes.png" alt="Icon" width="30" class="mb-2">
+                  <h5 class="fw-bold">Cuidado Facial</h5>
+                  <p class="small text-muted mb-1">Renueva tu piel con tratamientos especiales</p>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-decoration-line-through text-muted small">Bs. 250</span>
+                    <span class="fw-bold text-danger">Bs. 200</span>
+                  </div>
+                  <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 60
+                    Minutos</small>
+                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-2" data-nombre="Cuidado Facial" data-precio="200" data-duracion="60">Reserva tu cita</button>
+                </div>
+              </div>
+              <div class="col-6 promo-img" style="background-image: url('img/promo2.png');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden">
+            <div class="row g-0 h-100 bg-light-green">
+              <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
+                <div>
+                  <img src="icons/Lipstick--Streamline-Flex.png" alt="Icon" width="30" class="mb-2">
+                  <h5 class="fw-bold">Tratamientos Corporales</h5>
+                  <p class="small text-muted mb-1">Moldea tu figura con nuestros expertos</p>
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-decoration-line-through text-muted small">Bs. 400</span>
+                    <span class="fw-bold text-danger">Bs. 350</span>
+                  </div>
+                  <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 45
+                    Minutos</small>
+                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-3" data-nombre="Tratamientos Corporales" data-precio="350" data-duracion="45">Reserva tu cita</button>
+                </div>
+              </div>
+              <div class="col-6 promo-img" style="background-image: url('img/promocion1.png');"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services py-5">
+    <div class="container text-center">
+      <h2 class="script-title m-0">Nuestros</h2>
+      <h3 class="h4 text-uppercase fw-bold mb-4 text-primary-pink">Servicios</h3>
+      <div class="custom-divider mb-5">
+        <span class="line"></span>
+        <img src="icons/plant-2.png" alt="Decoración">
+        <span class="line"></span>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-6 col-lg-3">
+          <div class="card service-card border-0 rounded-4 shadow-sm">
+            <div class="position-relative">
+              <img src="img/MaquillajeNovia.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Profesional">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+                <img src="icons/heart.svg" width="16" alt="Favorito">
+              </button>
+              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">⭐ Más
+                Popular</span>
+            </div>
+            <div class="card-body text-start">
+              <h6 class="fw-bold mb-1">Maquillaje Profesional</h6>
+              <p class="small text-muted mb-3">Resalta tu belleza con maquillaje para cualquier ocasión especial</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 90 Minutos</small>
+                <div class="text-end">
+                  <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
+                  <span class="fw-bold text-primary-pink">Bs. 180</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
+                  class="me-2">Agendar Cita</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card service-card border-0 rounded-4 shadow-sm">
+            <div class="position-relative">
+              <img src="img/hero_services.png" class="card-img-top rounded-top-4" alt="Maquillaje Social">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+                <img src="icons/heart.svg" width="16" alt="Favorito">
+              </button>
+              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"> <img
+                  src="icons/calendar-plus.svg" width="14">Más Reservado</span>
+            </div>
+            <div class="card-body text-start">
+              <h6 class="fw-bold mb-1">Maquillaje Social</h6>
+              <p class="small text-muted mb-3">Ideal para eventos, fiestas y reuniones especiales</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 60 Minutos</small>
+                <div class="text-end">
+                  <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
+                  <span class="fw-bold text-primary-pink">Bs. 120</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
+                  class="me-2">Agendar Cita</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card service-card border-0 rounded-4 shadow-sm">
+            <div class="position-relative">
+              <img src="img/Peinados.jpeg" class="card-img-top rounded-top-4" alt="Quinceañeras">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+                <img src="icons/heart.svg" width="16" alt="Favorito">
+              </button>
+              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><img
+                  src="icons/crown.svg" width="14">Elegante</span>
+            </div>
+            <div class="card-body text-start">
+              <h6 class="fw-bold mb-1">Maquillaje para Quinceañeras</h6>
+              <p class="small text-muted mb-3">Un look espectacular para tu día especial</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 90 Minutos</small>
+                <div class="text-end">
+                  <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
+                  <span class="fw-bold text-primary-pink">Bs. 150</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
+                  class="me-2">Agendar Cita</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card service-card border-0 rounded-4 shadow-sm">
+            <div class="position-relative">
+              <img src="img/peinaldo social.png" class="card-img-top rounded-top-4" alt="Peinado Social">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+                <img src="icons/heart.svg" width="16" alt="Favorito">
+              </button>
+              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">⭐ Más
+                Popular</span>
+            </div>
+            <div class="card-body text-start">
+              <h6 class="fw-bold mb-1">Peinado Social</h6>
+              <p class="small text-muted mb-3">Peinados modernos y elegantes para cualquier ocasión</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 60 Minutos</small>
+                <div class="text-end">
+                  <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
+                  <span class="fw-bold text-primary-pink">Bs. 100</span>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
+                  class="me-2">Agendar Cita</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="gallery py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="script-title m-0">Nuestros</h2>
+      <h3 class="h4 text-uppercase fw-bold mb-4 text-primary-pink">Trabajos</h3>
+      <div class="custom-divider mb-5">
+        <span class="line"></span>
+        <img src="icons/plant.svg" alt="Decoración">
+        <span class="line"></span>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 col-lg-3">
+          <img src="img/Boda2.png" class="w-100 rounded-4 gallery-img img-tall shadow-sm" alt="Trabajo 1">
+        </div>
+
+        <div class="col-6 col-lg-3 d-flex flex-column gap-3">
+          <img src="img/file_00000000637c720ea00e72975b9bf0df.png"
+            class="w-100 rounded-4 gallery-img img-half shadow-sm" alt="Trabajo 2">
+          <img src="img/trabajos.jpeg" class="w-100 rounded-4 gallery-img img-half shadow-sm" alt="Trabajo 3">
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <img src="img/Cursos.png" class="w-100 rounded-4 gallery-img img-tall shadow-sm" alt="Trabajo 4">
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <img src="img/Peinados.png" class="w-100 rounded-4 gallery-img img-tall shadow-sm" alt="Trabajo 5">
+        </div>
+      </div>
+
+      <div
+        class="stats-banner mt-5 mx-auto bg-light-pink rounded-pill d-inline-flex flex-wrap justify-content-center align-items-center py-3 px-4 gap-4 shadow-sm position-relative z-2">
+        <div class="d-flex align-items-center gap-2">
+          <img src="icons/heart.svg" width="24" class="stats-icon">
+          <div class="text-start lh-1"><strong class="d-block">+500</strong> <small>Clientes Felices</small></div>
+        </div>
+        <div class="vr d-none d-md-block"></div>
+        <div class="d-flex align-items-center gap-2">
+          <img src="icons/medal-2.svg" width="24" class="stats-icon">
+          <div class="text-start lh-1"><strong class="d-block">+3 Años</strong> <small>De Experiencia</small></div>
+        </div>
+        <div class="vr d-none d-md-block"></div>
+        <div class="d-flex align-items-center gap-2">
+          <img src="icons/shield-half.svg" width="24" class="stats-icon">
+          <div class="text-start lh-1"><strong class="d-block">100%</strong> <small>Comprometidos contigo</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="salon-image py-5 text-center">
+    <h2 class="script-title m-0">Salón de</h2>
+    <h3 class="h4 text-uppercase fw-bold mb-4 text-primary-pink">Belleza</h3>
+    <div class="custom-divider mb-5">
+      <span class="line"></span>
+      <img src="icons/Hair-Dryer--Streamline-Flex.png" alt="Decoración">
+      <span class="line"></span>
+    </div>
+    <div class="container-fluid px-0">
+      <img src="img/salon de belleza.jpg" class="img-fluid w-100" alt="Interior Salón de Belleza"
+        style="max-height: 400px; object-fit: cover;">
+    </div>
+  </section>
+
+  <!-- Modal Carrito de Promociones -->
+  <div class="modal fade" id="modalCarritoPromos" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold">Tu Carrito de Promociones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carrito-vacio-promos" class="text-center text-muted py-4">
+            <img src="icons/shopping-bag.svg" alt="Carrito" width="48" class="mb-3 opacity-50">
+            <p class="mb-0">Tu carrito está vacío</p>
+          </div>
+          <div id="carrito-lista-promos"></div>
+          <div id="carrito-resumen-promos" class="d-none border-top pt-3 mt-3">
+            <div class="d-flex justify-content-between mb-2">
+              <span>Duración total</span>
+              <strong id="carrito-duracion-promos">0 min</strong>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Total a pagar</span>
+              <strong class="text-primary-pink" id="carrito-total-promos">Bs. 0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Seguir viendo</button>
+          <button type="button" class="btn btn-primary-pink rounded-pill" id="btn-continuar-reserva-promos" disabled onclick="irAServicios()">Continuar a reservar →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 text-center text-lg-start">
+          <img src="img/logo_sinfondo.png" alt="JM Beauty Studio" height="60" class="mb-3">
+          <p class="small text-light text-opacity-75">Un maquillaje elegante y duradero para uno de los días más
+            importantes de tu vida, resaltando tu belleza y cuidando tu piel.</p>
+        </div>
+        <div class="col-md-4 col-lg-2 offset-lg-1">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Empresa</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Sobre Nosotros</a></li>
+            <li class="mb-2"><a href="pages/servicios.html" class="text-decoration-none text-reset">Servicios</a></li>
+            <li class="mb-2"><a href="pages/contacto.html" class="text-decoration-none text-reset">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Servicios</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Maquillaje Profesional</a></li>
+            <li class="mb-2"><a href="pages/cursos.html" class="text-decoration-none text-reset">Cursos de
+                Maquillaje</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h6 class="text-uppercase fw-bold text-primary-pink mb-3">Contacto</h6>
+          <ul class="list-unstyled small text-light text-opacity-75">
+            <li class="mb-2">
+              <a href="https://wa.link/m07nyh" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="icons/brand-whatsapp.png" width="16"> WhatsApp
+            </li>
+            <li class="mb-2">
+              <a href="https://instagram.com/jesica.mv?utm_medium=copy_link" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="icons/brand-instagram.png" width="16"> @jesica.mv
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.facebook.com/profile.php?id=100063662254701&mibextid=ZbWKwL" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="icons/brand-facebook.png" width="16"> JM Beauty Studio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.tiktok.com/@jesicamaldonadovi" target="_blank"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="icons/brand-tiktok (1).svg" width="16"> @jesicamaldonadovi
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="mailto:jmv.beauty1@gmail.com"
+                class="text-decoration-none text-reset d-flex align-items-center gap-2">
+                <img src="icons/mail-opened_icon.png" width="16"> jmv.beauty1@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <div class="row small text-light text-opacity-50">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          © 2026 M Beauty Studio. Todos los Derechos Reservados.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          Localidad Cochabamba
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    // ============================================================
+    // CARRITO DE PROMOCIONES (INDEX)
+    // ============================================================
+    let carritoPromos = [];
+
+    function togglePromoCarrito(boton) {
+      const id       = boton.dataset.id;
+      const nombre   = boton.dataset.nombre;
+      const precio   = Number(boton.dataset.precio);
+      const duracion = Number(boton.dataset.duracion);
+
+      const yaExiste = carritoPromos.some(p => p.id === id);
+
+      if (yaExiste) {
+        carritoPromos = carritoPromos.filter(p => p.id !== id);
+      } else {
+        carritoPromos.push({ id, nombre, precio, duracion });
+      }
+
+      actualizarVistaCarritoPromos();
+    }
+
+    function actualizarVistaCarritoPromos() {
+      const cantidad = carritoPromos.length;
+      const badge   = document.getElementById('carrito-badge-promos');
+
+      if (badge) {
+        badge.textContent = cantidad;
+        badge.style.display = cantidad > 0 ? 'inline-block' : 'none';
+      }
+
+      renderListaCarritoPromos();
+    }
+
+    function renderListaCarritoPromos() {
+      const lista     = document.getElementById('carrito-lista-promos');
+      const vacio     = document.getElementById('carrito-vacio-promos');
+      const resumen   = document.getElementById('carrito-resumen-promos');
+      const btnCont   = document.getElementById('btn-continuar-reserva-promos');
+
+      if (carritoPromos.length === 0) {
+        lista.innerHTML = '';
+        vacio.classList.remove('d-none');
+        resumen.classList.add('d-none');
+        if (btnCont) btnCont.disabled = true;
+        return;
+      }
+
+      vacio.classList.add('d-none');
+      resumen.classList.remove('d-none');
+      if (btnCont) btnCont.disabled = false;
+
+      lista.innerHTML = carritoPromos.map(p => `
+        <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+          <div>
+            <p class="mb-0 fw-semibold">${p.nombre}</p>
+            <small class="text-muted">${p.duracion} min — Bs. ${p.precio}</small>
+          </div>
+          <button class="btn btn-sm btn-outline-danger rounded-circle" onclick="quitarDelCarritoPromos('${p.id}')">✕</button>
+        </div>
+      `).join('');
+
+      const duracionTotal = carritoPromos.reduce((sum, p) => sum + p.duracion, 0);
+      const precioTotal   = carritoPromos.reduce((sum, p) => sum + p.precio, 0);
+
+      document.getElementById('carrito-duracion-promos').textContent = `${duracionTotal} min`;
+      document.getElementById('carrito-total-promos').textContent    = `Bs. ${precioTotal}`;
+    }
+
+    function quitarDelCarritoPromos(id) {
+      carritoPromos = carritoPromos.filter(p => p.id !== id);
+      actualizarVistaCarritoPromos();
+    }
+
+    function irAServicios() {
+      // Cerrar modal actual
+      const modal = bootstrap.Modal.getInstance(document.getElementById('modalCarritoPromos'));
+      modal.hide();
+      
+      // Guardar carrito en sessionStorage para recuperarlo en servicios
+      sessionStorage.setItem('carritoPromosFromIndex', JSON.stringify(carritoPromos));
+      
+      // Ir a servicios
+      window.location.href = 'pages/servicios.html';
+    }
+
+    // Inicializar al cargar
+    document.addEventListener('DOMContentLoaded', () => {
+      // Conectar botones de promociones
+      document.querySelectorAll('.btn-agregar-promo').forEach(boton => {
+        boton.addEventListener('click', () => togglePromoCarrito(boton));
+      });
+
+      // Recuperar carrito de sessionStorage si existe
+      const saved = sessionStorage.getItem('carritoPromosFromIndex');
+      if (saved) {
+        try {
+          carritoPromos = JSON.parse(saved);
+          actualizarVistaCarritoPromos();
+          // Limpiar después de recuperar
+          sessionStorage.removeItem('carritoPromosFromIndex');
+        } catch(e) {}
+      }
+    });
+  </script>
+</body>
+
+</html>
