@@ -148,8 +148,8 @@
                 </div>
                 <div>
                   <div class="d-flex align-items-center gap-2 mb-2">
-                    <span class="text-decoration-line-through text-muted small">Bs. 150</span>
-                    <span class="fw-bold text-danger">Bs. 120</span>
+                    <span class="text-decoration-line-through text-muted small">BOB 150</span>
+                    <span class="fw-bold text-danger">BOB 120</span>
                   </div>
                   <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 90
                     Minutos</small>
@@ -171,8 +171,8 @@
                 </div>
                 <div>
                   <div class="d-flex align-items-center gap-2 mb-2">
-                    <span class="text-decoration-line-through text-muted small">Bs. 250</span>
-                    <span class="fw-bold text-danger">Bs. 200</span>
+                    <span class="text-decoration-line-through text-muted small">BOB 250</span>
+                    <span class="fw-bold text-danger">BOB 200</span>
                   </div>
                   <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 60
                     Minutos</small>
@@ -194,8 +194,8 @@
                 </div>
                 <div>
                   <div class="d-flex align-items-center gap-2 mb-2">
-                    <span class="text-decoration-line-through text-muted small">Bs. 400</span>
-                    <span class="fw-bold text-danger">Bs. 350</span>
+                    <span class="text-decoration-line-through text-muted small">BOB 400</span>
+                    <span class="fw-bold text-danger">BOB 350</span>
                   </div>
                   <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 45
                     Minutos</small>
@@ -237,7 +237,7 @@
                 <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 90 Minutos</small>
                 <div class="text-end">
                   <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
-                  <span class="fw-bold text-primary-pink">Bs. 180</span>
+                  <span class="fw-bold text-primary-pink">BOB 180</span>
                 </div>
               </div>
               <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
@@ -262,7 +262,7 @@
                 <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 60 Minutos</small>
                 <div class="text-end">
                   <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
-                  <span class="fw-bold text-primary-pink">Bs. 120</span>
+                  <span class="fw-bold text-primary-pink">BOB 120</span>
                 </div>
               </div>
               <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
@@ -287,7 +287,7 @@
                 <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 90 Minutos</small>
                 <div class="text-end">
                   <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
-                  <span class="fw-bold text-primary-pink">Bs. 150</span>
+                  <span class="fw-bold text-primary-pink">BOB 150</span>
                 </div>
               </div>
               <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
@@ -312,7 +312,7 @@
                 <small class="text-muted"><img src="icons/clock-hour-11.png" width="14"> 60 Minutos</small>
                 <div class="text-end">
                   <small class="text-muted d-block" style="font-size: 0.7rem;">Desde</small>
-                  <span class="fw-bold text-primary-pink">Bs. 100</span>
+                  <span class="fw-bold text-primary-pink">BOB 100</span>
                 </div>
               </div>
               <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
@@ -406,7 +406,7 @@
             </div>
             <div class="d-flex justify-content-between">
               <span>Total a pagar</span>
-              <strong class="text-primary-pink" id="carrito-total-promos">Bs. 0</strong>
+              <strong class="text-primary-pink" id="carrito-total-promos">BOB 0</strong>
             </div>
           </div>
         </div>
@@ -551,7 +551,7 @@
         <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
           <div>
             <p class="mb-0 fw-semibold">${p.nombre}</p>
-            <small class="text-muted">${p.duracion} min — Bs. ${p.precio}</small>
+            <small class="text-muted">${p.duracion} min — BOB ${p.precio}</small>
           </div>
           <button class="btn btn-sm btn-outline-danger rounded-circle" onclick="quitarDelCarritoPromos('${p.id}')">✕</button>
         </div>
@@ -561,7 +561,7 @@
       const precioTotal   = carritoPromos.reduce((sum, p) => sum + p.precio, 0);
 
       document.getElementById('carrito-duracion-promos').textContent = `${duracionTotal} min`;
-      document.getElementById('carrito-total-promos').textContent    = `Bs. ${precioTotal}`;
+      document.getElementById('carrito-total-promos').textContent    = `BOB ${precioTotal}`;
     }
 
     function quitarDelCarritoPromos(id) {
@@ -600,6 +600,399 @@
       }
     });
   </script>
+
+  <!-- MODAL DE PROMOCIONES - POPUP AL ENTRAR -->
+  <div class="modal fade" id="modalPromoPopup" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalPromoPopupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content promo-modal-content">
+        
+        <!-- Boton cerrar - VISIBLE Y OSCURO -->
+        <button type="button" class="promo-btn-close-custom" data-bs-dismiss="modal" aria-label="Cerrar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        
+        <div class="modal-body p-0">
+          <div class="promo-popup-wrapper">
+            
+            <!-- Header con gradiente -->
+            <div class="promo-popup-header">
+              <div class="promo-popup-header-content text-center">
+                <span class="promo-popup-badge">OFERTAS EXCLUSIVAS</span>
+                <h2 class="promo-popup-title">Aprovecha estas Promociones</h2>
+                <p class="promo-popup-subtitle">Precios especiales por tiempo limitado</p>
+              </div>
+            </div>
+            
+            <!-- Cards de promociones -->
+            <div class="promo-popup-body">
+              <div class="container">
+                <div class="row g-4 justify-content-center">
+                  
+                  <!-- Promo 1 -->
+                  <div class="col-md-6 col-lg-4">
+                    <div class="promo-popup-card h-100">
+                      <div class="promo-popup-card-header">
+                        <span class="promo-popup-card-tag">Maquillaje</span>
+                        <span class="promo-popup-card-discount">-20%</span>
+                      </div>
+                      <h3 class="promo-popup-card-title">Maquillaje Profesional</h3>
+                      <p class="promo-popup-card-desc">Maquillaje para cualquier ocasion especial, destacando tu belleza natural</p>
+                      <div class="promo-popup-card-timing">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        90 minutos
+                      </div>
+                      <div class="promo-popup-card-price">
+                        <span class="promo-popup-price-old">BOB 150</span>
+                        <span class="promo-popup-price-new">BOB 120</span>
+                      </div>
+                      <a href="pages/servicios.html" class="btn btn-primary-pink w-100 mt-auto">Reservar Ahora</a>
+                    </div>
+                  </div>
+                  
+                  <!-- Promo 2 -->
+                  <div class="col-md-6 col-lg-4">
+                    <div class="promo-popup-card h-100">
+                      <div class="promo-popup-card-header">
+                        <span class="promo-popup-card-tag">Facial</span>
+                        <span class="promo-popup-card-discount">-20%</span>
+                      </div>
+                      <h3 class="promo-popup-card-title">Cuidado Facial</h3>
+                      <p class="promo-popup-card-desc">Renueva tu piel con tratamientos faciales especializados</p>
+                      <div class="promo-popup-card-timing">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        60 minutos
+                      </div>
+                      <div class="promo-popup-card-price">
+                        <span class="promo-popup-price-old">BOB 250</span>
+                        <span class="promo-popup-price-new">BOB 200</span>
+                      </div>
+                      <a href="pages/servicios.html" class="btn btn-primary-pink w-100 mt-auto">Reservar Ahora</a>
+                    </div>
+                  </div>
+                  
+                  <!-- Promo 3 -->
+                  <div class="col-md-6 col-lg-4">
+                    <div class="promo-popup-card h-100">
+                      <div class="promo-popup-card-header">
+                        <span class="promo-popup-card-tag">Corporal</span>
+                        <span class="promo-popup-card-discount">-13%</span>
+                      </div>
+                      <h3 class="promo-popup-card-title">Tratamientos Corporales</h3>
+                      <p class="promo-popup-card-desc">Moldea tu figura con nuestros tratamientos reductores</p>
+                      <div class="promo-popup-card-timing">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        45 minutos
+                      </div>
+                      <div class="promo-popup-card-price">
+                        <span class="promo-popup-price-old">BOB 400</span>
+                        <span class="promo-popup-price-new">BOB 350</span>
+                      </div>
+                      <a href="pages/servicios.html" class="btn btn-primary-pink w-100 mt-auto">Reservar Ahora</a>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <!-- Contacto -->
+                <div class="promo-popup-contact">
+                  <p class="promo-popup-contact-text">Te asesoramos personalmente</p>
+                  <div class="promo-popup-contact-links">
+                    <a href="tel:+59177712345" class="promo-popup-contact-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      +591 777-12345
+                    </a>
+                    <a href="https://wa.link/m07nyh" target="_blank" class="promo-popup-contact-link promo-popup-contact-whatsapp">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estilos del modal de promociones -->
+  <style>
+    .promo-modal-content {
+      border: none;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 80px rgba(216, 75, 127, 0.3);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    /* Boton cerrar visible - negro con X blanca */
+    .promo-btn-close-custom {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #2d2d2d;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .promo-btn-close-custom svg {
+      color: white;
+    }
+
+    .promo-btn-close-custom:hover {
+      background: #1a1a1a;
+      transform: scale(1.1);
+    }
+
+    .promo-btn-close-custom:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(216, 75, 127, 0.4), 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .promo-popup-wrapper {
+      background: #fff;
+    }
+
+    .promo-popup-header {
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      padding: 50px 30px 40px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .promo-popup-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+    }
+
+    .promo-popup-badge {
+      background: rgba(255,255,255,0.2);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .promo-popup-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .promo-popup-subtitle {
+      font-size: 16px;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .promo-popup-body {
+      padding: 40px 20px 30px;
+    }
+
+    .promo-popup-card {
+      background: white;
+      border: 2px solid #f0f0f0;
+      border-radius: 20px;
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .promo-popup-card:hover {
+      border-color: #d84b7f;
+      box-shadow: 0 10px 40px rgba(216, 75, 127, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .promo-popup-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .promo-popup-card-tag {
+      background: #fff5f8;
+      color: #d84b7f;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .promo-popup-card-discount {
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .promo-popup-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2d2d2d;
+      margin: 0 0 10px;
+    }
+
+    .promo-popup-card-desc {
+      font-size: 14px;
+      color: #888;
+      margin: 0 0 15px;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .promo-popup-card-timing {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .promo-popup-card-timing svg {
+      color: #d84b7f;
+    }
+
+    .promo-popup-card-price {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .promo-popup-price-old {
+      font-size: 15px;
+      color: #bbb;
+      text-decoration: line-through;
+    }
+
+    .promo-popup-price-new {
+      font-size: 28px;
+      font-weight: 700;
+      color: #d84b7f;
+    }
+
+    .promo-popup-contact {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+
+    .promo-popup-contact-text {
+      font-size: 16px;
+      color: #666;
+      margin: 0 0 20px;
+    }
+
+    .promo-popup-contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .promo-popup-contact-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      background: #f5f5f5;
+      color: #2d2d2d;
+    }
+
+    .promo-popup-contact-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .promo-popup-contact-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .promo-popup-contact-whatsapp:hover {
+      background: #1da851;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .promo-popup-title {
+        font-size: 24px;
+      }
+
+      .promo-popup-header {
+        padding: 40px 20px 30px;
+      }
+
+      .promo-popup-body {
+        padding: 30px 15px 20px;
+      }
+
+      .promo-popup-card {
+        padding: 25px 20px;
+      }
+
+      .promo-popup-price-new {
+        font-size: 24px;
+      }
+
+      .promo-btn-close-custom {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+      }
+    }
+  </style>
+
+  <!-- Script para mostrar el modal al cargar la pagina -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var modalPromo = new bootstrap.Modal(document.getElementById('modalPromoPopup'));
+        modalPromo.show();
+      }, 800);
+    });
+  </script>
+
 </body>
 
 </html>

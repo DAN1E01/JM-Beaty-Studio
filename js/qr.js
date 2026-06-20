@@ -32,7 +32,7 @@ class GeneradorQR {
       `Banco: ${dataStore.getBanco()}\n` +
       `Titular: ${dataStore.getTitular()}\n` +
       `Cuenta: ${dataStore.getCuenta()}\n` +
-      `Monto: Bs. ${datos.montoSena}\n` +
+      `Monto: BOB ${datos.montoSena}\n` +
       `Ref: ${datos.numeroReserva}`
     );
   }
@@ -50,11 +50,11 @@ class GeneradorQR {
       ? datos.servicios.map(s => `
           <div style="display:flex;justify-content:space-between;font-size:0.85rem;padding:0.25rem 0;">
             <span>${s.nombre}</span>
-            <span style="font-weight:600;">Bs. ${s.precio}</span>
+            <span style="font-weight:600;">BOB ${s.precio}</span>
           </div>
         `).join('')
       : `<div style="display:flex;justify-content:space-between;font-size:0.85rem;padding:0.25rem 0;">
-           <span>${datos.servicio}</span><span style="font-weight:600;">Bs. ${datos.precio}</span>
+           <span>${datos.servicio}</span><span style="font-weight:600;">BOB ${datos.precio}</span>
          </div>`;
 
     target.innerHTML = `
@@ -88,7 +88,7 @@ class GeneradorQR {
           ${this._filaResumen('Hora',      `${datos.hora}${datos.horaFin ? ' a ' + datos.horaFin : ''}`)}
           ${this._filaResumen('Cliente',   datos.nombre)}
           ${this._filaResumen('Teléfono',  datos.telefono)}
-          ${this._filaResumen('Total',     `Bs. ${datos.precioTotal}`)}
+          ${this._filaResumen('Total',     `BOB ${datos.precioTotal}`)}
         </div>
 
         ${tieneSena ? this._bloqueSena(datos) : this._bloqueSinSena(datos)}
@@ -129,7 +129,7 @@ class GeneradorQR {
     return `
       <div style="background:#FFF9F0;border:2px solid var(--color-acento);border-radius:0.75rem;padding:1.25rem;margin-bottom:1.5rem;">
         <p style="font-weight:700;color:var(--color-botones);margin-bottom:0.25rem;">
-          💳 Seña requerida: Bs. ${datos.montoSena}
+          💳 Seña requerida: BOB ${datos.montoSena}
         </p>
         <p style="font-size:0.8rem;color:var(--color-texto-sec);margin-bottom:1rem;">
           Escaneá el QR o transferí manualmente para reservar tu turno. Luego enviá la captura por WhatsApp.
@@ -141,7 +141,7 @@ class GeneradorQR {
           <p><strong>Banco:</strong> ${dataStore.getBanco()}</p>
           <p><strong>Titular:</strong> ${dataStore.getTitular()}</p>
           <p><strong>Cuenta:</strong> ${dataStore.getCuenta()}</p>
-          <p><strong>Monto:</strong> Bs. ${datos.montoSena}</p>
+          <p><strong>Monto:</strong> BOB ${datos.montoSena}</p>
           <p><strong>Referencia:</strong> ${datos.numeroReserva}</p>
         </div>
       </div>

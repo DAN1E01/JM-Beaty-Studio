@@ -59,7 +59,7 @@ function renderListaCarrito() {
     <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
       <div>
         <p class="mb-0 fw-semibold">${s.nombre}</p>
-        <small class="text-muted">${s.duracion} min — Bs. ${s.precio}</small>
+        <small class="text-muted">${s.duracion} min — BOB ${s.precio}</small>
       </div>
       <button class="btn btn-sm btn-outline-danger rounded-circle" onclick="quitarDelCarrito('${s.id}')">✕</button>
     </div>
@@ -69,7 +69,7 @@ function renderListaCarrito() {
   const precioTotal    = carritoServicios.reduce((sum, s) => sum + s.precio, 0);
 
   document.getElementById('carrito-duracion').textContent = `${duracionTotal} min`;
-  document.getElementById('carrito-total').textContent    = `Bs. ${precioTotal}`;
+  document.getElementById('carrito-total').textContent    = `BOB ${precioTotal}`;
 }
 
 function quitarDelCarrito(id) {
@@ -113,7 +113,7 @@ async function abrirModalReserva() {
   const precioTotal    = carritoServicios.reduce((sum, s) => sum + s.precio, 0);
 
   document.getElementById('reserva-subtitulo').textContent =
-    `${cantidad} servicio${cantidad > 1 ? 's' : ''} — ${duracionTotal} min — Bs. ${precioTotal}`;
+    `${cantidad} servicio${cantidad > 1 ? 's' : ''} — ${duracionTotal} min — BOB ${precioTotal}`;
 
   // Pedir los horarios ocupados ANTES de mostrar el calendario
   document.getElementById('calendario-container').innerHTML =
@@ -346,7 +346,7 @@ function irAPaso2() {
   const precioTotal    = carritoServicios.reduce((sum, s) => sum + s.precio, 0);
 
   const listaServicios = carritoServicios.map(s =>
-    `<div class="d-flex justify-content-between"><span>${s.nombre}</span><span>Bs. ${s.precio}</span></div>`
+    `<div class="d-flex justify-content-between"><span>${s.nombre}</span><span>BOB ${s.precio}</span></div>`
   ).join('');
 
   document.getElementById('resumen-reserva').innerHTML = `
@@ -354,7 +354,7 @@ function irAPaso2() {
     <hr>
     <div class="d-flex justify-content-between"><span>Fecha</span><strong>${calDiaSeleccionado}</strong></div>
     <div class="d-flex justify-content-between"><span>Hora</span><strong>${calHoraSeleccionada}</strong></div>
-    <div class="d-flex justify-content-between"><span>Total</span><strong class="text-primary-pink">Bs. ${precioTotal}</strong></div>
+    <div class="d-flex justify-content-between"><span>Total</span><strong class="text-primary-pink">BOB ${precioTotal}</strong></div>
   `;
 
   // Cambiar de paso visualmente
@@ -454,12 +454,12 @@ function mostrarPasoConfirmacion(datos) {
 
     <div class="bg-light rounded-4 p-3 mb-4 text-start">
       ${datos._serviciosData.map(s => `
-        <div class="d-flex justify-content-between"><span>${s.nombre}</span><span>Bs. ${s.precio}</span></div>
+        <div class="d-flex justify-content-between"><span>${s.nombre}</span><span>BOB ${s.precio}</span></div>
       `).join('')}
       <hr>
       <div class="d-flex justify-content-between"><span>Fecha</span><strong>${datos.fecha}</strong></div>
       <div class="d-flex justify-content-between"><span>Hora</span><strong>${datos.hora}</strong></div>
-      <div class="d-flex justify-content-between"><span>Total</span><strong class="text-primary-pink">Bs. ${datos.precioTotal}</strong></div>
+      <div class="d-flex justify-content-between"><span>Total</span><strong class="text-primary-pink">BOB ${datos.precioTotal}</strong></div>
     </div>
 
     <p class="fw-semibold mb-2">Escaneá para realizar tu pago / seña</p>
@@ -475,14 +475,14 @@ function mostrarPasoConfirmacion(datos) {
 }
 
 function construirMensajeWhatsapp(datos) {
-  const listaServicios = datos._serviciosData.map(s => `   • ${s.nombre} — Bs. ${s.precio}`).join('\n');
+  const listaServicios = datos._serviciosData.map(s => `   • ${s.nombre} — BOB ${s.precio}`).join('\n');
 
   return (
     `Hola! 👋 Soy *${datos.nombre}* y acabo de realizar una reserva:\n\n` +
     `📌 *Servicios:*\n${listaServicios}\n\n` +
     `📅 *Fecha:* ${datos.fecha}\n` +
     `🕐 *Hora:* ${datos.hora}\n` +
-    `💰 *Total:* Bs. ${datos.precioTotal}\n` +
+    `💰 *Total:* BOB ${datos.precioTotal}\n` +
     `📞 *Teléfono:* ${datos.telefono}\n` +
     `🔖 *N° Reserva:* ${datos.numeroReserva}\n\n` +
     `Adjunto comprobante de pago. ¡Gracias! 🌸`

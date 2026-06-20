@@ -136,6 +136,21 @@ h1, .h1 {
     padding-bottom: 0.8rem !important;
 }
 
+/* Boton hamburguesa del menu movil */
+.navbar-toggler {
+    border: 2px solid var(--primary-pink) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(216, 75, 127, 0.25) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23d84b7f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
 .main-logo {
     height: 140px !important; /* Logo grande e imponente como en Canva */
     width: auto;
