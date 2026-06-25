@@ -138,7 +138,8 @@
 
       <div class="row g-4 justify-content-center">
         <div class="col-md-6 col-lg-4">
-          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden">
+          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden cursor-pointer" 
+               onclick="openQuickView('promo-1')">
             <div class="row g-0 h-100 bg-light-yellow">
               <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
                 <div>
@@ -153,7 +154,7 @@
                   </div>
                   <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 90
                     Minutos</small>
-                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="srv-001" data-nombre="Maquillaje Profesional" data-precio="120" data-duracion="90">Reserva tu cita</button>
+                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-1" data-nombre="Maquillaje Profesional" data-precio="120" data-duracion="90" onclick="event.stopPropagation(); togglePromoCarrito(this);">Reserva tu cita</button>
                 </div>
               </div>
               <div class="col-6 promo-img" style="background-image: url('img/PeinadosSinFondo.png');"></div>
@@ -161,7 +162,19 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden">
+          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden cursor-pointer" 
+               onclick="openQuickView({
+                 tipo: 'promo',
+                 tag: 'Promoción -20%',
+                 titulo: 'Cuidado Facial',
+                 subtitle: 'Renueva tu piel con tratamientos especiales',
+                 descripcion: 'Tratamiento facial profesional que incluye limpieza profunda, hidratación y técnicas especializadas para dejar tu piel radiante y saludable. Ideal como preparación para eventos especiales.',
+                 imagen: 'img/promo2.png',
+                 precio: 200,
+                 precioOld: 250,
+                 duracion: '60 Minutos',
+                 features: ['Limpieza facial profunda', 'Exfoliación profesional', 'Hidratación intensiva', 'Masaje facial relajante', 'Aplicación de mascarilla']
+               })">
             <div class="row g-0 h-100 bg-light-orange">
               <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
                 <div>
@@ -176,7 +189,7 @@
                   </div>
                   <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 60
                     Minutos</small>
-                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-2" data-nombre="Cuidado Facial" data-precio="200" data-duracion="60">Reserva tu cita</button>
+                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-2" data-nombre="Cuidado Facial" data-precio="200" data-duracion="60" onclick="event.stopPropagation(); togglePromoCarrito(this);">Reserva tu cita</button>
                 </div>
               </div>
               <div class="col-6 promo-img" style="background-image: url('img/promo2.png');"></div>
@@ -184,7 +197,19 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden">
+          <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden cursor-pointer" 
+               onclick="openQuickView({
+                 tipo: 'promo',
+                 tag: 'Promoción -13%',
+                 titulo: 'Tratamientos Corporales',
+                 subtitle: 'Moldea tu figura con nuestros expertos',
+                 descripcion: 'Tratamientos reductores y моделирующие que ayudan a reducir medidas y mejorar la apariencia de la piel. Incluye técnicas de masaje especializadas y productos de alta eficacia.',
+                 imagen: 'img/promocion1.png',
+                 precio: 350,
+                 precioOld: 400,
+                 duracion: '45 Minutos',
+                 features: ['Tratamiento reductor', 'Drenaje linfático', 'Masaje моделирующий', 'Aplicación de productos reductores', 'Asesoría nutricional básica']
+               })">
             <div class="row g-0 h-100 bg-light-green">
               <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
                 <div>
@@ -199,7 +224,7 @@
                   </div>
                   <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 45
                     Minutos</small>
-                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-3" data-nombre="Tratamientos Corporales" data-precio="350" data-duracion="45">Reserva tu cita</button>
+                  <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-3" data-nombre="Tratamientos Corporales" data-precio="350" data-duracion="45" onclick="event.stopPropagation(); togglePromoCarrito(this);">Reserva tu cita</button>
                 </div>
               </div>
               <div class="col-6 promo-img" style="background-image: url('img/promocion1.png');"></div>
@@ -221,13 +246,14 @@
       </div>
       <div class="row g-4 justify-content-center">
         <div class="col-sm-6 col-lg-3">
-          <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" 
+               onclick="openQuickView('srv-001')">
             <div class="position-relative">
               <img src="img/MaquillajeNovia.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Profesional">
-              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
                 <img src="icons/heart.svg" width="16" alt="Favorito">
               </button>
-              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">⭐ Más
+              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Popular
                 Popular</span>
             </div>
             <div class="card-body text-start">
@@ -240,16 +266,18 @@
                   <span class="fw-bold text-primary-pink">BOB 180</span>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
-                  class="me-2">Agendar Cita</a>
+              <button type="button" class="btn btn-primary-pink w-100 rounded-pill" onclick="event.stopPropagation(); openQuickView('srv-001')">
+                <img src="icons/calendar-plus.svg" width="16" class="me-2">Ver Detalles
+              </button>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" 
+               onclick="openQuickView('srv-002')">
             <div class="position-relative">
               <img src="img/hero_services.png" class="card-img-top rounded-top-4" alt="Maquillaje Social">
-              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
                 <img src="icons/heart.svg" width="16" alt="Favorito">
               </button>
               <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"> <img
@@ -265,16 +293,18 @@
                   <span class="fw-bold text-primary-pink">BOB 120</span>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
-                  class="me-2">Agendar Cita</a>
+              <button type="button" class="btn btn-primary-pink w-100 rounded-pill" onclick="event.stopPropagation(); openQuickView('srv-002')">
+                <img src="icons/calendar-plus.svg" width="16" class="me-2">Ver Detalles
+              </button>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" 
+               onclick="openQuickView('srv-003')">
             <div class="position-relative">
               <img src="img/Peinados.jpeg" class="card-img-top rounded-top-4" alt="Quinceañeras">
-              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
                 <img src="icons/heart.svg" width="16" alt="Favorito">
               </button>
               <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><img
@@ -290,19 +320,21 @@
                   <span class="fw-bold text-primary-pink">BOB 150</span>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
-                  class="me-2">Agendar Cita</a>
+              <button type="button" class="btn btn-primary-pink w-100 rounded-pill" onclick="event.stopPropagation(); openQuickView('srv-003')">
+                <img src="icons/calendar-plus.svg" width="16" class="me-2">Ver Detalles
+              </button>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <div class="card service-card border-0 rounded-4 shadow-sm">
+          <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" 
+               onclick="openQuickView('srv-004')">
             <div class="position-relative">
               <img src="img/peinaldo social.png" class="card-img-top rounded-top-4" alt="Peinado Social">
-              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+              <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
                 <img src="icons/heart.svg" width="16" alt="Favorito">
               </button>
-              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">⭐ Más
+              <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Popular
                 Popular</span>
             </div>
             <div class="card-body text-start">
@@ -315,8 +347,9 @@
                   <span class="fw-bold text-primary-pink">BOB 100</span>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary-pink w-100 rounded-pill"><img src="icons/calendar-plus.svg" width="16"
-                  class="me-2">Agendar Cita</a>
+              <button type="button" class="btn btn-primary-pink w-100 rounded-pill" onclick="event.stopPropagation(); openQuickView('srv-004')">
+                <img src="icons/calendar-plus.svg" width="16" class="me-2">Ver Detalles
+              </button>
             </div>
           </div>
         </div>
@@ -414,6 +447,99 @@
           <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Seguir viendo</button>
           <button type="button" class="btn btn-primary-pink rounded-pill" id="btn-continuar-reserva-promos" disabled onclick="irAServicios()">Continuar a reservar →</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL QUICK VIEW (Estilo Alibaba/Amazon) ================= -->
+  <div class="modal fade" id="modalQuickView" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-quickview">
+      <div class="modal-content rounded-4 overflow-hidden border-0 shadow-lg">
+        
+        <!-- Header del Modal -->
+        <div class="modal-header border-0 p-0 position-relative">
+          <button type="button" class="btn-close btn-close-quickview position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        
+        <!-- Body del Modal -->
+        <div class="modal-body p-0">
+          <div class="row g-0">
+            
+            <!-- Columna Izquierda: Imagen Grande -->
+            <div class="col-lg-5 position-relative quickview-image-section">
+              <img src="" alt="" class="quickview-main-image w-100 h-100" id="qv-image">
+              <div class="quickview-badges position-absolute" id="qv-badges"></div>
+              <!-- Overlay con categoría -->
+              <div class="quickview-category-overlay" id="qv-category-overlay"></div>
+            </div>
+            
+            <!-- Columna Derecha: Información Completa -->
+            <div class="col-lg-7 p-4 p-lg-5 quickview-info-section">
+              
+              <!-- Header: Tag + Urgency Badge -->
+              <div class="d-flex align-items-center gap-2 mb-3 flex-wrap" id="qv-header">
+                <span class="quickview-tag" id="qv-tag"></span>
+                <span class="quickview-urgency-badge" id="qv-urgency">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                  <span id="qv-urgency-text">Por tiempo limitado</span>
+                </span>
+              </div>
+              
+              <!-- Título -->
+              <h3 class="quickview-title mb-2" id="qv-title"></h3>
+              
+              <!-- Subtítulo/Descripción corta -->
+              <p class="quickview-subtitle text-muted mb-3" id="qv-subtitle"></p>
+              
+              <!-- Precio, Descuento y Duración -->
+              <div class="quickview-price-box mb-4" id="qv-price-box">
+                <div class="quickview-price-row">
+                  <div class="quickview-price-main">
+                    <span class="quickview-price" id="qv-precio"></span>
+                    <span class="quickview-price-old text-muted text-decoration-line-through" id="qv-precio-old"></span>
+                    <span class="quickview-discount-badge" id="qv-discount"></span>
+                  </div>
+                  <div class="quickview-duration-badge" id="qv-duration-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    <span id="qv-duracion"></span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Características Destacadas (mini cards) -->
+              <div class="quickview-highlights mb-4" id="qv-highlights"></div>
+              
+              <!-- Servicios Incluidos (solo para servicios) -->
+              <div class="quickview-features mb-4" id="qv-features-section">
+                <h6 class="fw-bold mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 text-primary-pink"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                  ¿Qué incluye este servicio?
+                </h6>
+                <ul class="list-unstyled quickview-features-list" id="qv-features-list">
+                </ul>
+              </div>
+              
+              <!-- Descripción Completa -->
+              <div class="quickview-description mb-4" id="qv-description-section">
+                <h6 class="fw-bold mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 text-primary-pink"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Descripción del servicio
+                </h6>
+                <p class="text-muted small lh-lg" id="qv-descripcion"></p>
+              </div>
+              
+              <!-- Botones de Acción -->
+              <div class="quickview-actions d-flex gap-3 mt-auto pt-3" id="qv-actions">
+                <button type="button" class="btn btn-primary-pink flex-grow-1 rounded-pill py-3 fw-bold quickview-btn-reserve" id="qv-btn-reserve">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Reservar Ahora
+                </button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -617,9 +743,9 @@
             <!-- Header con gradiente -->
             <div class="promo-popup-header">
               <div class="promo-popup-header-content text-center">
-                <span class="promo-popup-badge">OFERTAS EXCLUSIVAS</span>
+                <span class="promo-popup-badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> OFERTAS EXCLUSIVAS</span>
                 <h2 class="promo-popup-title">Aprovecha estas Promociones</h2>
-                <p class="promo-popup-subtitle">Precios especiales por tiempo limitado</p>
+                <p class="promo-popup-subtitle">¡Cada una tiene tiempo limitado diferente. ¡Apúrate!</p>
               </div>
             </div>
             
@@ -634,6 +760,34 @@
                       <div class="promo-popup-card-header">
                         <span class="promo-popup-card-tag">Maquillaje</span>
                         <span class="promo-popup-card-discount">-20%</span>
+                      </div>
+                      <!-- COUNTDOWN INDIVIDUAL -->
+                      <div class="promo-card-countdown" id="countdown-promo1">
+                        <div class="promo-card-countdown-header">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                          <span>Solo por 14 dias</span>
+                        </div>
+                        <div class="promo-card-countdown-timer">
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd1-days">00</span>
+                            <span class="promo-card-countdown-label">Días</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd1-hours">00</span>
+                            <span class="promo-card-countdown-label">Hrs</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd1-minutes">00</span>
+                            <span class="promo-card-countdown-label">Min</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd1-seconds">00</span>
+                            <span class="promo-card-countdown-label">Seg</span>
+                          </div>
+                        </div>
                       </div>
                       <h3 class="promo-popup-card-title">Maquillaje Profesional</h3>
                       <p class="promo-popup-card-desc">Maquillaje para cualquier ocasion especial, destacando tu belleza natural</p>
@@ -656,6 +810,34 @@
                         <span class="promo-popup-card-tag">Facial</span>
                         <span class="promo-popup-card-discount">-20%</span>
                       </div>
+                      <!-- COUNTDOWN INDIVIDUAL -->
+                      <div class="promo-card-countdown promo-card-countdown-urgent" id="countdown-promo2">
+                        <div class="promo-card-countdown-header">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                          <span>Solo por 10 dias</span>
+                        </div>
+                        <div class="promo-card-countdown-timer">
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd2-days">00</span>
+                            <span class="promo-card-countdown-label">Días</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd2-hours">00</span>
+                            <span class="promo-card-countdown-label">Hrs</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd2-minutes">00</span>
+                            <span class="promo-card-countdown-label">Min</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd2-seconds">00</span>
+                            <span class="promo-card-countdown-label">Seg</span>
+                          </div>
+                        </div>
+                      </div>
                       <h3 class="promo-popup-card-title">Cuidado Facial</h3>
                       <p class="promo-popup-card-desc">Renueva tu piel con tratamientos faciales especializados</p>
                       <div class="promo-popup-card-timing">
@@ -676,6 +858,29 @@
                       <div class="promo-popup-card-header">
                         <span class="promo-popup-card-tag">Corporal</span>
                         <span class="promo-popup-card-discount">-13%</span>
+                      </div>
+                      <!-- COUNTDOWN INDIVIDUAL -->
+                      <div class="promo-card-countdown promo-card-countdown-weekend" id="countdown-promo3">
+                        <div class="promo-card-countdown-header">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                          <span>Solo por 1 mes</span>
+                        </div>
+                        <div class="promo-card-countdown-timer">
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd3-hours">00</span>
+                            <span class="promo-card-countdown-label">Hrs</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd3-minutes">00</span>
+                            <span class="promo-card-countdown-label">Min</span>
+                          </div>
+                          <span class="promo-card-countdown-sep">:</span>
+                          <div class="promo-card-countdown-unit">
+                            <span class="promo-card-countdown-number" id="cd3-seconds">00</span>
+                            <span class="promo-card-countdown-label">Seg</span>
+                          </div>
+                        </div>
                       </div>
                       <h3 class="promo-popup-card-title">Tratamientos Corporales</h3>
                       <p class="promo-popup-card-desc">Moldea tu figura con nuestros tratamientos reductores</p>
@@ -807,6 +1012,104 @@
       font-size: 16px;
       opacity: 0.9;
       margin: 0;
+    }
+
+    /* ========== INDIVIDUAL CARD COUNTDOWN STYLES ========== */
+    .promo-card-countdown {
+      background: linear-gradient(135deg, #fff5f8 0%, #fff 100%);
+      border: 2px solid #fde8ef;
+      border-radius: 12px;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+    }
+
+    .promo-card-countdown-urgent {
+      background: linear-gradient(135deg, #fff3e0 0%, #fff 100%);
+      border-color: #ffcc80;
+    }
+
+    .promo-card-countdown-weekend {
+      background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+      border-color: #90caf9;
+    }
+
+    .promo-card-countdown-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #d84b7f;
+      margin-bottom: 8px;
+    }
+
+    .promo-card-countdown-urgent .promo-card-countdown-header {
+      color: #e65100;
+    }
+
+    .promo-card-countdown-weekend .promo-card-countdown-header {
+      color: #1565c0;
+    }
+
+    .promo-card-countdown-header svg {
+      animation: pulse 2s infinite;
+    }
+
+    .promo-card-countdown-timer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .promo-card-countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 36px;
+    }
+
+    .promo-card-countdown-number {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      color: #2d2d2d;
+    }
+
+    .promo-card-countdown-label {
+      font-size: 8px;
+      text-transform: uppercase;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .promo-card-countdown-sep {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ccc;
+      margin: 0 1px;
+    }
+
+    /* Urgency Badge */
+    .promo-popup-card-urgency {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #e74c3c;
+      background: #fff5f5;
+      padding: 5px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #ffebee;
+    }
+
+    .promo-popup-card-urgency svg {
+      color: #e74c3c;
     }
 
     .promo-popup-body {
@@ -983,8 +1286,660 @@
     }
   </style>
 
+  <!-- ================= QUICK VIEW MODAL STYLES ================= -->
+  <style>
+    /* Modal Quick View - Estilo Alibaba/Amazon */
+    .modal-quickview {
+      max-width: 1100px;
+    }
+
+    .btn-close-quickview {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .btn-close-quickview:hover {
+      background-color: #f5f5f5;
+      transform: scale(1.1);
+    }
+
+    .btn-close-quickview::before {
+      content: '×';
+      font-size: 24px;
+      line-height: 1;
+      color: #333;
+    }
+
+    /* ========== MEJORADO: QUICK VIEW STYLES ========== */
+    .quickview-image-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      min-height: 550px;
+      max-height: 650px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .quickview-main-image {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      min-height: 550px;
+      transition: transform 0.5s ease;
+    }
+
+    .quickview-main-image:hover {
+      transform: scale(1.05);
+    }
+
+    .quickview-badges {
+      top: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .quickview-category-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+      padding: 30px 20px 20px;
+      color: white;
+    }
+
+    .quickview-tag {
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(216, 75, 127, 0.3);
+    }
+
+    .quickview-urgency-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff3e0;
+      color: #e65100;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid #ffe0b2;
+    }
+
+    .quickview-urgency-badge svg {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .quickview-info-section {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .quickview-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .quickview-subtitle {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #6c757d;
+    }
+
+    .quickview-price-box {
+      background: linear-gradient(135deg, #fff5f8 0%, #fff 100%);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #fde8ef;
+    }
+
+    .quickview-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .quickview-price-main {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .quickview-price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #d84b7f;
+      letter-spacing: -0.02em;
+    }
+
+    .quickview-price-old {
+      font-size: 1.1rem;
+      color: #adb5bd;
+    }
+
+    .quickview-discount-badge {
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 3px 10px rgba(216, 75, 127, 0.3);
+    }
+
+    .quickview-duration-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f8f9fa;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .quickview-duration-badge svg {
+      color: #d84b7f;
+    }
+
+    .quickview-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .quickview-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f8f9fa;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .quickview-highlight-item svg {
+      color: #d84b7f;
+      flex-shrink: 0;
+    }
+
+    .quickview-features {
+      background: linear-gradient(135deg, #fafbfc 0%, #f8f9fa 100%);
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid #e9ecef;
+    }
+
+    .quickview-features h6 {
+      color: #1a1a2e;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .quickview-features-list {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .quickview-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: white;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: #495057;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: all 0.2s ease;
+    }
+
+    .quickview-features-list li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .quickview-features-list li::before {
+      content: '✓';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(216, 75, 127, 0.3);
+    }
+
+    .quickview-description {
+      padding-top: 20px;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .quickview-description h6 {
+      color: #1a1a2e;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .quickview-description p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #6c757d;
+    }
+
+    .quickview-actions {
+      border-top: 2px solid #f0f0f0;
+      padding-top: 25px;
+      margin-top: auto;
+    }
+
+    .quickview-btn-reserve {
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .quickview-btn-reserve:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(216, 75, 127, 0.4);
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .quickview-image-section {
+        min-height: 280px;
+        max-height: 320px;
+      }
+
+      .quickview-main-image {
+        min-height: 280px;
+      }
+
+      .quickview-title {
+        font-size: 1.5rem;
+      }
+
+      .quickview-price {
+        font-size: 1.8rem;
+      }
+
+      .quickview-price-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <!-- ================= QUICK VIEW DATA & FUNCTIONS ================= -->
+  <script>
+    // ============================================================
+    // BASE DE DATOS DE SERVICIOS PARA EL QUICK VIEW MODAL
+    // ============================================================
+    const quickViewData = {
+      // PROMOS del index.html
+      'promo-1': {
+        tipo: 'promo',
+        tag: 'Promoción -20%',
+        titulo: 'Maquillaje Profesional',
+        subtitle: 'Resalta tu belleza con maquillaje para cualquier ocasión especial',
+        descripcion: 'Servicio de maquillaje profesional ideal para eventos especiales, fiestas, cumpleaños y ocasiones importantes. Utilizamos productos de alta calidad para un acabado impecable y duradero.',
+        imagen: 'img/PeinadosSinFondo.png',
+        precio: 120,
+        precioOld: 150,
+        duracion: '90 Minutos',
+        highlights: [
+          { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/>', text: 'Certificado' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '90 min' },
+          { icon: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>', text: 'Premium' }
+        ],
+        features: ['Maquillaje profesional completo', 'Preparación de piel previa', 'Uso de productos premium', 'Asesoría de tonos y estilos', 'Resultado duradero 8+ horas']
+      },
+      'promo-2': {
+        tipo: 'promo',
+        tag: 'Promoción -20%',
+        titulo: 'Cuidado Facial',
+        subtitle: 'Renueva tu piel con tratamientos especiales',
+        descripcion: 'Tratamiento facial profesional que incluye limpieza profunda, hidratación y técnicas especializadas para dejar tu piel radiante y saludable. Ideal como preparación para eventos especiales.',
+        imagen: 'img/promo2.png',
+        precio: 200,
+        precioOld: 250,
+        duracion: '60 Minutos',
+        highlights: [
+          { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/>', text: 'Profesional' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '60 min' },
+          { icon: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>', text: 'Hidratante' }
+        ],
+        features: ['Limpieza facial profunda', 'Exfoliación profesional', 'Hidratación intensiva', 'Masaje facial relajante', 'Aplicación de mascarilla']
+      },
+      'promo-3': {
+        tipo: 'promo',
+        tag: 'Promoción -13%',
+        titulo: 'Tratamientos Corporales',
+        subtitle: 'Moldea tu figura con nuestros expertos',
+        descripcion: 'Tratamientos reductores y моделирующие que ayudan a reducir medidas y mejorar la apariencia de la piel. Incluye técnicas de masaje especializadas y productos de alta eficacia.',
+        imagen: 'img/promocion1.png',
+        precio: 350,
+        precioOld: 400,
+        duracion: '45 Minutos',
+        highlights: [
+          { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/>', text: 'Experto' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '45 min' },
+          { icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>', text: 'Reductor' }
+        ],
+        features: ['Tratamiento reductor', 'Drenaje linfático', 'Masaje моделирующий', 'Aplicación de productos reductores', 'Asesoría nutricional básica']
+      },
+      // SERVICIOS del index.html
+      'srv-002': {
+        tipo: 'servicio',
+        tag: 'Más Reservado',
+        titulo: 'Maquillaje Social',
+        subtitle: 'Ideal para eventos, fiestas y reuniones especiales',
+        descripcion: 'Servicio de maquillaje social perfecto para eventos, fiestas de cumpleaños, reuniones y cualquier ocasión donde quieras verte fabulosa. Técnica profesional con productos de larga duración.',
+        imagen: 'img/hero_services.png',
+        precio: 120,
+        precioOld: null,
+        duracion: '60 Minutos',
+        highlights: [
+          { icon: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>', text: 'Natural' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '60 min' },
+          { icon: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/>', text: 'Glam' }
+        ],
+        features: ['Consulta de estilo previa', 'Maquillaje social completo', 'Técnicas de larga duración', 'Acabado natural o glam', 'Incluye retoque básico']
+      },
+      'srv-003': {
+        tipo: 'servicio',
+        tag: 'Elegante',
+        titulo: 'Maquillaje para Quinceañeras',
+        subtitle: 'Un look espectacular para tu día especial',
+        descripcion: 'Maquillaje especializado para quinceañeras con un look juvenil, elegante y sofisticado. Resaltamos la belleza natural de la joven mientras le damos el toque de glam que merece su día especial.',
+        imagen: 'img/Peinados.jpeg',
+        precio: 150,
+        precioOld: null,
+        duracion: '90 Minutos',
+        highlights: [
+          { icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>', text: 'Especial' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '90 min' },
+          { icon: '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>', text: ' Fotos' }
+        ],
+        features: ['Consulta de estilo personalizada', 'Maquillaje juvenil y elegante', 'Técnica de fijación para fotos', 'Products anti-brillo', 'Asesoría de cuidado de piel']
+      },
+      'srv-004': {
+        tipo: 'servicio',
+        tag: 'Más Popular',
+        titulo: 'Peinado Social',
+        subtitle: 'Peinados modernos y elegantes para cualquier ocasión',
+        descripcion: 'Servicio de peinado social con estilos modernos y elegantes. Desde ondas suaves hasta moños sofisticados, creamos el look perfecto para complementar tu maquillaje y outfit.',
+        imagen: 'img/peinaldo social.png',
+        precio: 100,
+        precioOld: null,
+        duracion: '60 Minutos',
+        highlights: [
+          { icon: '<path d="M20.21 15.89A10 10 0 1 1 8 2.83"/>', text: 'Moda' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '60 min' },
+          { icon: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>', text: 'Experto' }
+        ],
+        features: ['Consulta de estilo capilar', 'Lavado y preparación', 'Peinado profesional', 'Productos de fijación', 'Duración garantizada']
+      }
+    };
+
+    // ============================================================
+    // FUNCIÓN PRINCIPAL: OPEN QUICK VIEW
+    // ============================================================
+    function openQuickView(id) {
+      const data = quickViewData[id];
+      if (!data) {
+        console.warn('No se encontró datos para el id:', id);
+        return;
+      }
+
+      // Llenar imagen
+      document.getElementById('qv-image').src = data.imagen;
+      document.getElementById('qv-image').alt = data.titulo;
+
+      // Llenar tag
+      document.getElementById('qv-tag').textContent = data.tag;
+
+      // Mostrar badge de urgencia para promos
+      const urgencyBadge = document.getElementById('qv-urgency');
+      const urgencyText = document.getElementById('qv-urgency-text');
+      if (data.tipo === 'promo') {
+        urgencyBadge.style.display = 'flex';
+        urgencyText.textContent = '¡Solo por tiempo limitado!';
+      } else {
+        urgencyBadge.style.display = 'none';
+      }
+
+      // Llenar título y subtitulo
+      document.getElementById('qv-title').textContent = data.titulo;
+      document.getElementById('qv-subtitle').textContent = data.subtitle;
+
+      // Llenar precios
+      document.getElementById('qv-precio').textContent = 'BOB ' + data.precio;
+
+      if (data.precioOld) {
+        document.getElementById('qv-precio-old').textContent = 'BOB ' + data.precioOld;
+        document.getElementById('qv-precio-old').style.display = 'inline';
+        // Calcular descuento
+        const descuento = Math.round((1 - data.precio / data.precioOld) * 100);
+        document.getElementById('qv-discount').textContent = '-' + descuento + '%';
+        document.getElementById('qv-discount').style.display = 'inline';
+      } else {
+        document.getElementById('qv-precio-old').style.display = 'none';
+        document.getElementById('qv-discount').style.display = 'none';
+      }
+
+      // Llenar duración
+      document.getElementById('qv-duracion').textContent = data.duracion;
+
+      // Llenar highlights (mini cards con características)
+      const highlightsContainer = document.getElementById('qv-highlights');
+      if (data.highlights && data.highlights.length > 0) {
+        highlightsContainer.innerHTML = data.highlights.map(h => `
+          <div class="quickview-highlight-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${h.icon}</svg>
+            <span>${h.text}</span>
+          </div>
+        `).join('');
+        highlightsContainer.style.display = 'grid';
+      } else {
+        highlightsContainer.style.display = 'none';
+      }
+
+      // Llenar features (servicios incluidos)
+      const featuresList = document.getElementById('qv-features-list');
+      featuresList.innerHTML = data.features.map(f => '<li>' + f + '</li>').join('');
+
+      // Llenar descripción
+      document.getElementById('qv-descripcion').textContent = data.descripcion;
+
+      // Guardar referencia de datos en el modal para el botón reservar
+      const modal = document.getElementById('modalQuickView');
+      modal.dataset.currentData = JSON.stringify(data);
+
+      // Configurar botón de reserva según el tipo
+      const btnReservar = document.getElementById('qv-btn-reserve');
+      btnReservar.onclick = function() {
+        if (data.tipo === 'promo') {
+          // Para promos: agregar al carrito de promos y redirigir a servicios
+          togglePromoCarritoFromQuickView(data);
+        } else {
+          // Para servicios: agregar al carrito de servicios y abrir modal carrito
+          agregarCarritoServiciosFromQuickView(data);
+        }
+      };
+
+      // Mostrar el modal
+      const modalInstance = new bootstrap.Modal(document.getElementById('modalQuickView'));
+      modalInstance.show();
+    }
+
+    // Función para agregar promo desde Quick View
+    function togglePromoCarritoFromQuickView(data) {
+      // Mapear títulos a IDs de promo
+      const promoIdMap = {
+        'Maquillaje Profesional': 'promo-1',
+        'Cuidado Facial': 'promo-2',
+        'Tratamientos Corporales': 'promo-3'
+      };
+      const promoId = promoIdMap[data.titulo] || data.titulo.toLowerCase().replace(/\s+/g, '-');
+
+      // Verificar si ya está en el carrito
+      const yaExiste = carritoPromos.some(p => p.id === promoId);
+      if (yaExiste) {
+        // Ya está agregado, ir directo a servicios
+        bootstrap.Modal.getInstance(document.getElementById('modalQuickView')).hide();
+        setTimeout(() => {
+          window.location.href = 'pages/servicios.html';
+        }, 300);
+      } else {
+        // Agregar y guardar en sessionStorage para recuperar en servicios
+        carritoPromos.push({
+          id: promoId,
+          nombre: data.titulo,
+          precio: data.precio,
+          duracion: Number(data.duracion.replace(/[^\d]/g, ''))
+        });
+        sessionStorage.setItem('carritoPromosFromIndex', JSON.stringify(carritoPromos));
+        // Cerrar modal quick view y abrir carrito de promos
+        bootstrap.Modal.getInstance(document.getElementById('modalQuickView')).hide();
+        setTimeout(() => {
+          bootstrap.Modal.getInstance(document.getElementById('modalCarritoPromos')).show();
+        }, 300);
+      }
+    }
+
+    // Función para agregar servicio desde Quick View
+    function agregarCarritoServiciosFromQuickView(data) {
+      // En index.html, redirigir a servicios.html con el ID del servicio
+      // porque index.html no tiene el carrito de servicios (eso está en servicios.html)
+      const servicioIdMap = {
+        'Maquillaje Profesional': 'srv-001',
+        'Maquillaje Social': 'srv-002',
+        'Maquillaje para Quinceañeras': 'srv-003',
+        'Peinado Social': 'srv-004'
+      };
+      const servicioId = servicioIdMap[data.titulo];
+
+      // Guardar en sessionStorage para recuperar en servicios.html
+      sessionStorage.setItem('servicioSeleccionado', JSON.stringify({
+        id: servicioId,
+        nombre: data.titulo,
+        precio: data.precio,
+        duracion: Number(data.duracion.replace(/[^\d]/g, ''))
+      }));
+
+      // Cerrar modal y redirigir a servicios
+      bootstrap.Modal.getInstance(document.getElementById('modalQuickView')).hide();
+      setTimeout(() => {
+        window.location.href = 'pages/servicios.html';
+      }, 300);
+    }
+  </script>
+
   <!-- Script para mostrar el modal al cargar la pagina -->
   <script>
+    // ===== 3 INDIVIDUAL COUNTDOWN TIMERS =====
+    // Promo 1: 14 dias ("Solo por esta semana")
+    const promo1EndDate = new Date().getTime() + (14 * 24 * 60 * 60 * 1000);
+    
+    // Promo 2: 10 dias ("Solo por 10 dias")
+    const promo2EndDate = new Date().getTime() + (10 * 24 * 60 * 60 * 1000);
+    
+    // Promo 3: 30 dias ("Solo por 1 mes")
+    const promo3EndDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000);
+    
+    function updatePromoCountdown(promoNum, endDate) {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+      
+      // Solo actualizar si el elemento existe (algunos promos no tienen days)
+      const daysEl = document.getElementById('cd' + promoNum + '-days');
+      const hoursEl = document.getElementById('cd' + promoNum + '-hours');
+      const minutesEl = document.getElementById('cd' + promoNum + '-minutes');
+      const secondsEl = document.getElementById('cd' + promoNum + '-seconds');
+      
+      // Si no existe el hours, el promo no tiene countdown
+      if (!hoursEl) return;
+      
+      if (distance < 0) {
+        if (daysEl) daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        
+        const countdownEl = document.getElementById('countdown-promo' + promoNum);
+        if (countdownEl) {
+          countdownEl.innerHTML = '<div class="promo-countdown-expired"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Finalizada</div>';
+        }
+        return;
+      }
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+      hoursEl.textContent = String(hours).padStart(2, '0');
+      minutesEl.textContent = String(minutes).padStart(2, '0');
+      secondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+    
+    function updateAllCountdowns() {
+      updatePromoCountdown(1, promo1EndDate);
+      updatePromoCountdown(2, promo2EndDate);
+      updatePromoCountdown(3, promo3EndDate);
+    }
+    
+    // Actualizar cada segundo
+    updateAllCountdowns();
+    setInterval(updateAllCountdowns, 1000);
+    
+    // ===== MOSTRAR MODAL DE PROMOCIONES =====
     document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         var modalPromo = new bootstrap.Modal(document.getElementById('modalPromoPopup'));
@@ -992,6 +1947,22 @@
       }, 800);
     });
   </script>
+
+  <!-- Estilos para countdown expirado -->
+  <style>
+    .promo-countdown-expired {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #c9184a;
+      padding: 8px 12px;
+      background: #fff5f5;
+      border-radius: 8px;
+    }
+  </style>
 
 </body>
 

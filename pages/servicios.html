@@ -92,12 +92,12 @@
     <div class="row g-4 justify-content-center mb-5">
       <!-- Tarjeta 1 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-001')">
           <div class="position-relative">
             <img src="../img/novia_maqui.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Profesional">
-            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">⭐
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               Popular</span>
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -115,7 +115,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-001" data-nombre="Maquillaje Profesional" data-precio="180" data-duracion="90">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -123,10 +123,10 @@
 
       <!-- Tarjeta 2 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-002')">
           <div class="position-relative">
             <img src="../img/servicio_social.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Social">
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -144,7 +144,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-002" data-nombre="Maquillaje Social" data-precio="120" data-duracion="60">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -152,12 +152,12 @@
 
       <!-- Tarjeta 3 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-003')">
           <div class="position-relative">
             <img src="../img/servicio_quinceañera.jpg" class="card-img-top rounded-top-4" alt="Quinceañeras">
-            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">👑
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2 4l3 12h14l3-12-6 7-4-9-4 9-6-7zm3 16h14"/></svg>
               Especial</span>
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -175,7 +175,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-003" data-nombre="Maquillaje Quinceañeras" data-precio="150" data-duracion="90">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -183,10 +183,10 @@
 
       <!-- Tarjeta 4 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-004')">
           <div class="position-relative">
             <img src="../img/servicios_mopdernos.jpg" class="card-img-top rounded-top-4" alt="Peinado Social">
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -204,7 +204,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-004" data-nombre="Peinado Social" data-precio="100" data-duracion="60">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -215,12 +215,12 @@
     <div class="row g-4 justify-content-center mb-5">
       <!-- Tarjeta 5 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-005')">
           <div class="position-relative">
             <img src="../img/Peinados.jpeg" class="card-img-top rounded-top-4" alt="Maquillaje Novia">
-            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">💍
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg>
               Novia</span>
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -238,7 +238,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-005" data-nombre="Maquillaje de Novia" data-precio="350" data-duracion="120">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -246,10 +246,10 @@
 
       <!-- Tarjeta 6 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-006')">
           <div class="position-relative">
             <img src="../img/lavado_cabello.jpg" class="card-img-top rounded-top-4" alt="Peinado Novia">
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -267,7 +267,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-006" data-nombre="Peinado de Novia" data-precio="250" data-duracion="90">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -275,10 +275,10 @@
 
       <!-- Tarjeta 7 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-007')">
           <div class="position-relative">
             <img src="../img/preparacion_piel.jpg" class="card-img-top rounded-top-4" alt="Preparación de Piel">
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -296,7 +296,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-007" data-nombre="Preparación de Piel" data-precio="80" data-duracion="60">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -304,12 +304,12 @@
 
       <!-- Tarjeta 8 -->
       <div class="col-sm-6 col-lg-3">
-        <div class="card service-card border-0 rounded-4 shadow-sm">
+        <div class="card service-card border-0 rounded-4 shadow-sm cursor-pointer" onclick="openQuickView('srv-008')">
           <div class="position-relative">
             <img src="../img/MaquillajeProfesional.jpg" class="card-img-top rounded-top-4" alt="Maquillaje Editorial">
-            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2">✨
+            <span class="badge bg-primary-pink position-absolute bottom-0 start-0 m-2 rounded-pill px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M5 19l1 3 1-3 3-1-3-1-1-3-1 3-3 1z"/></svg>
               Nuevo</span>
-            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn">
+            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-2 p-2 shadow-sm heart-btn" onclick="event.stopPropagation();">
               <img src="../icons/heart.svg" width="16" alt="Favorito">
             </button>
           </div>
@@ -327,7 +327,7 @@
             <button type="button" class="btn btn-primary-pink w-100 rounded-pill py-2 btn-agregar-carrito"
               data-id="srv-008" data-nombre="Maquillaje Editorial" data-precio="200" data-duracion="90">
               <img src="../icons/calendar-plus.svg" width="16" class="me-2" style="filter: brightness(0) invert(1);">
-              Agendar Cita
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -410,6 +410,97 @@
     </section>
 
   </main>
+
+  <!-- ================= MODAL QUICK VIEW (Estilo Alibaba/Amazon) ================= -->
+  <div class="modal fade" id="modalQuickView" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-quickview">
+      <div class="modal-content rounded-4 overflow-hidden border-0 shadow-lg">
+        
+        <!-- Header del Modal -->
+        <div class="modal-header border-0 p-0 position-relative">
+          <button type="button" class="btn-close btn-close-quickview position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        
+        <!-- Body del Modal -->
+        <div class="modal-body p-0">
+          <div class="row g-0">
+            
+            <!-- Columna Izquierda: Imagen Grande -->
+            <div class="col-lg-5 position-relative quickview-image-section">
+              <img src="" alt="" class="quickview-main-image w-100 h-100" id="qv-image">
+              <div class="quickview-badges position-absolute" id="qv-badges"></div>
+              <div class="quickview-category-overlay" id="qv-category-overlay"></div>
+            </div>
+            
+            <!-- Columna Derecha: Información Completa -->
+            <div class="col-lg-7 p-4 p-lg-5 quickview-info-section">
+              
+              <!-- Header: Tag + Urgency Badge -->
+              <div class="d-flex align-items-center gap-2 mb-3 flex-wrap" id="qv-header">
+                <span class="quickview-tag" id="qv-tag"></span>
+                <span class="quickview-urgency-badge" id="qv-urgency">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                  <span id="qv-urgency-text">Por tiempo limitado</span>
+                </span>
+              </div>
+              
+              <!-- Título -->
+              <h3 class="quickview-title mb-2" id="qv-title"></h3>
+              
+              <!-- Subtítulo/Descripción corta -->
+              <p class="quickview-subtitle text-muted mb-3" id="qv-subtitle"></p>
+              
+              <!-- Precio, Descuento y Duración -->
+              <div class="quickview-price-box mb-4" id="qv-price-box">
+                <div class="quickview-price-row">
+                  <div class="quickview-price-main">
+                    <span class="quickview-price" id="qv-precio"></span>
+                    <span class="quickview-price-old text-muted text-decoration-line-through" id="qv-precio-old"></span>
+                    <span class="quickview-discount-badge" id="qv-discount"></span>
+                  </div>
+                  <div class="quickview-duration-badge" id="qv-duration-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    <span id="qv-duracion"></span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Características Destacadas (mini cards) -->
+              <div class="quickview-highlights mb-4" id="qv-highlights"></div>
+              
+              <!-- Servicios Incluidos (solo para servicios) -->
+              <div class="quickview-features mb-4" id="qv-features-section">
+                <h6 class="fw-bold mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 text-primary-pink"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                  ¿Qué incluye este servicio?
+                </h6>
+                <ul class="list-unstyled quickview-features-list" id="qv-features-list"></ul>
+              </div>
+              
+              <!-- Descripción Completa -->
+              <div class="quickview-description mb-4" id="qv-description-section">
+                <h6 class="fw-bold mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 text-primary-pink"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Descripción del servicio
+                </h6>
+                <p class="text-muted small lh-lg" id="qv-descripcion"></p>
+              </div>
+              
+              <!-- Botones de Acción -->
+              <div class="quickview-actions d-flex gap-3 mt-auto pt-3" id="qv-actions">
+                <button type="button" class="btn btn-primary-pink flex-grow-1 rounded-pill py-3 fw-bold quickview-btn-reserve" id="qv-btn-reserve">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Reservar Ahora
+                </button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
   <footer class="bg-dark text-white pt-5 pb-3">
     <div class="container">
@@ -599,10 +690,603 @@
             console.error('Error al procesar promociones:', e);
           }
         }
+
+        // Verificar si viene de un Quick View con servicio seleccionado
+        const servicioSeleccionado = sessionStorage.getItem('servicioSeleccionado');
+        if (servicioSeleccionado) {
+          try {
+            const servicio = JSON.parse(servicioSeleccionado);
+            const yaExiste = carritoServicios.some(s => s.nombre === servicio.nombre);
+            if (!yaExiste) {
+              carritoServicios.push(servicio);
+              if (typeof actualizarVistaCarrito === 'function') {
+                actualizarVistaCarrito();
+              }
+            }
+            sessionStorage.removeItem('servicioSeleccionado');
+          } catch(e) {
+            console.error('Error al procesar servicio seleccionado:', e);
+          }
+        }
       }, 100);
     });
   </script>
-  
+
+  <!-- ================= QUICK VIEW MODAL STYLES ================= -->
+  <style>
+    /* Modal Quick View - Estilo Alibaba/Amazon */
+    .modal-quickview {
+      max-width: 1100px;
+    }
+
+    .btn-close-quickview {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .btn-close-quickview:hover {
+      background-color: #f5f5f5;
+      transform: scale(1.1);
+    }
+
+    .btn-close-quickview::before {
+      content: '×';
+      font-size: 24px;
+      line-height: 1;
+      color: #333;
+    }
+
+    /* ========== MEJORADO: QUICK VIEW STYLES ========== */
+    .quickview-image-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      min-height: 550px;
+      max-height: 650px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .quickview-main-image {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      min-height: 550px;
+      transition: transform 0.5s ease;
+    }
+
+    .quickview-main-image:hover {
+      transform: scale(1.05);
+    }
+
+    .quickview-badges {
+      top: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .quickview-category-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+      padding: 30px 20px 20px;
+      color: white;
+    }
+
+    .quickview-tag {
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(216, 75, 127, 0.3);
+    }
+
+    .quickview-urgency-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff3e0;
+      color: #e65100;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid #ffe0b2;
+    }
+
+    .quickview-urgency-badge svg {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .quickview-info-section {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .quickview-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .quickview-subtitle {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #6c757d;
+    }
+
+    .quickview-price-box {
+      background: linear-gradient(135deg, #fff5f8 0%, #fff 100%);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #fde8ef;
+    }
+
+    .quickview-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .quickview-price-main {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .quickview-price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #d84b7f;
+      letter-spacing: -0.02em;
+    }
+
+    .quickview-price-old {
+      font-size: 1.1rem;
+      color: #adb5bd;
+    }
+
+    .quickview-discount-badge {
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 3px 10px rgba(216, 75, 127, 0.3);
+    }
+
+    .quickview-duration-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f8f9fa;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .quickview-duration-badge svg {
+      color: #d84b7f;
+    }
+
+    .quickview-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .quickview-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f8f9fa;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .quickview-highlight-item svg {
+      color: #d84b7f;
+      flex-shrink: 0;
+    }
+
+    .quickview-features {
+      background: linear-gradient(135deg, #fafbfc 0%, #f8f9fa 100%);
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid #e9ecef;
+    }
+
+    .quickview-features h6 {
+      color: #1a1a2e;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .quickview-features-list {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .quickview-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: white;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: #495057;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: all 0.2s ease;
+    }
+
+    .quickview-features-list li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .quickview-features-list li::before {
+      content: '✓';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      background: linear-gradient(135deg, #d84b7f 0%, #c9184a 100%);
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(216, 75, 127, 0.3);
+    }
+
+    .quickview-description {
+      padding-top: 20px;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .quickview-description h6 {
+      color: #1a1a2e;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .quickview-description p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #6c757d;
+    }
+
+    .quickview-actions {
+      border-top: 2px solid #f0f0f0;
+      padding-top: 25px;
+      margin-top: auto;
+    }
+
+    .quickview-btn-reserve {
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .quickview-btn-reserve:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(216, 75, 127, 0.4);
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .quickview-image-section {
+        min-height: 280px;
+        max-height: 320px;
+      }
+
+      .quickview-main-image {
+        min-height: 280px;
+      }
+
+      .quickview-title {
+        font-size: 1.5rem;
+      }
+
+      .quickview-price {
+        font-size: 1.8rem;
+      }
+
+      .quickview-price-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <!-- ================= QUICK VIEW DATA & FUNCTIONS ================= -->
+  <script>
+    // BASE DE DATOS DE SERVICIOS PARA EL QUICK VIEW MODAL
+    const quickViewData = {
+      'srv-001': {
+        tipo: 'servicio',
+        tag: 'Mas Popular',
+        titulo: 'Maquillaje Profesional',
+        subtitle: 'Resalta tu belleza con maquillaje para cualquier ocasión especial',
+        descripcion: 'Servicio completo de maquillaje profesional utilizando productos de alta calidad. Perfecto para cualquier evento especial donde quieras lucir espectacular y sentirte segura.',
+        imagen: '../img/novia_maqui.jpg',
+        precio: 180,
+        precioOld: null,
+        duracion: '90 Minutos',
+        highlights: [
+          { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/>', text: 'Certificado' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '90 min' },
+          { icon: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>', text: 'Premium' }
+        ],
+        features: ['Consulta previa de estilo', 'Preparación de piel', 'Maquillaje completo rostro', 'Corrección de imperfecciones', 'Fijación profesional', 'Asesoría de mantenimiento']
+      },
+      'srv-002': {
+        tipo: 'servicio',
+        tag: 'Más Reservado',
+        titulo: 'Maquillaje Social',
+        subtitle: 'Ideal para eventos, fiestas y ocasiones especiales',
+        descripcion: 'Servicio de maquillaje social perfecto para eventos, fiestas de cumpleaños, reuniones y cualquier ocasión donde quieras verte fabulosa. Técnica profesional con productos de larga duración.',
+        imagen: '../img/servicio_social.jpg',
+        precio: 120,
+        precioOld: null,
+        duracion: '60 Minutos',
+        highlights: [
+          { icon: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>', text: 'Natural' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '60 min' },
+          { icon: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/>', text: 'Glam' }
+        ],
+        features: ['Consulta de estilo previa', 'Maquillaje social completo', 'Técnicas de larga duración', 'Acabado natural o glam', 'Incluye retoque básico']
+      },
+      'srv-003': {
+        tipo: 'servicio',
+        tag: 'Especial',
+        titulo: 'Maquillaje Quinceañeras',
+        subtitle: 'Un look espectacular para tu día especial',
+        descripcion: 'Maquillaje especializado para quinceañeras con un look juvenil, elegante y sofisticado. Resaltamos la belleza natural de la joven mientras le damos el toque de glam que merece su día especial.',
+        imagen: '../img/servicio_quinceañera.jpg',
+        precio: 150,
+        precioOld: null,
+        duracion: '90 Minutos',
+        highlights: [
+          { icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>', text: 'Especial' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '90 min' },
+          { icon: '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>', text: ' Fotos' }
+        ],
+        features: ['Consulta de estilo personalizada', 'Maquillaje juvenil y elegante', 'Técnica de fijación para fotos', 'Productos anti-brillo', 'Asesoría de cuidado de piel']
+      },
+      'srv-004': {
+        tipo: 'servicio',
+        tag: 'Popular',
+        titulo: 'Peinado Social',
+        subtitle: 'Peinados modernos y elegantes para cualquier ocasión',
+        descripcion: 'Servicio de peinado social con estilos modernos y elegantes. Desde ondas suaves hasta moños sofisticados, creamos el look perfecto para complementar tu maquillaje y outfit.',
+        imagen: '../img/servicios_mopdernos.jpg',
+        precio: 100,
+        precioOld: null,
+        duracion: '60 Minutos',
+        highlights: [
+          { icon: '<path d="M20.21 15.89A10 10 0 1 1 8 2.83"/>', text: 'Moda' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '60 min' },
+          { icon: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>', text: 'Experto' }
+        ],
+        features: ['Consulta de estilo capilar', 'Lavado y preparación', 'Peinado profesional', 'Productos de fijación', 'Duración garantizada']
+      },
+      'srv-005': {
+        tipo: 'servicio',
+        tag: 'Novia',
+        titulo: 'Maquillaje de Novia',
+        subtitle: 'El look perfecto para tu día más especial',
+        descripcion: 'Servicio premium de maquillaje nupcial que te hará sentir la más hermosa en tu día especial. Incluye prueba de maquillaje previa, consulta de estilo y productos de larga duración.',
+        imagen: '../img/Peinados.jpeg',
+        precio: 350,
+        precioOld: null,
+        duracion: '120 Minutos',
+        highlights: [
+          { icon: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>', text: 'Premium' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '120 min' },
+          { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/>', text: 'Prueba' }
+        ],
+        features: ['Prueba previa de maquillaje', 'Consulta extensiva de estilo', 'Maquillaje nupcial completo', 'Técnica de alta duración', 'Productos a prueba de lágrimas', 'Toque final de glamour']
+      },
+      'srv-006': {
+        tipo: 'servicio',
+        tag: 'Elegante',
+        titulo: 'Peinado de Novia',
+        subtitle: 'Un peinado elegante y duradero para tu boda',
+        descripcion: 'Servicio de peinado nupcial con estilos elegantes y sofisticados. Creamos el peinado perfecto que complementará tu vestido y maquillaje para un look completo y armonioso.',
+        imagen: '../img/lavado_cabello.jpg',
+        precio: 250,
+        precioOld: null,
+        duracion: '90 Minutos',
+        highlights: [
+          { icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>', text: 'Elegante' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '90 min' },
+          { icon: '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>', text: 'Prueba' }
+        ],
+        features: ['Consulta de estilo capilar', 'Lavado y tratamiento', 'Peinado nupcial elegante', 'Productos de fijación profesionales', 'Prueba previa incluida', 'Duración todo el evento']
+      },
+      'srv-007': {
+        tipo: 'servicio',
+        tag: 'Recomendado',
+        titulo: 'Preparación de Piel',
+        subtitle: 'Tratamiento facial para una piel radiante',
+        descripcion: 'Tratamiento facial profesional que prepara tu piel para un maquillaje perfecto. Incluye limpieza, exfoliación e hidratación para que tu cutis luzca radiante.',
+        imagen: '../img/preparacion_piel.jpg',
+        precio: 80,
+        precioOld: null,
+        duracion: '60 Minutos',
+        highlights: [
+          { icon: '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/>', text: 'Profesional' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '60 min' },
+          { icon: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>', text: 'Hidratante' }
+        ],
+        features: ['Limpieza facial profunda', 'Exfoliación suave', 'Hidratación intensiva', 'Masaje facial relajante', 'Tónico equilibrante']
+      },
+      'srv-008': {
+        tipo: 'servicio',
+        tag: 'Nuevo',
+        titulo: 'Maquillaje Editorial',
+        subtitle: 'Para sesiones fotográficas y eventos especiales',
+        descripcion: 'Servicio de maquillaje editorial para sesiones fotográficas, producciones de video y eventos de alto impacto. Utilizamos técnicas profesionales que funcionan perfectamente ante las cámaras.',
+        imagen: '../img/MaquillajeProfesional.jpg',
+        precio: 200,
+        precioOld: null,
+        duracion: '90 Minutos',
+        highlights: [
+          { icon: '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>', text: 'Fotos' },
+          { icon: '<circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>', text: '90 min' },
+          { icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>', text: 'Pro' }
+        ],
+        features: ['Consulta de estilo editorial', 'Maquillaje de alta definición', 'Técnica a prueba de flash', 'Acabado perfecto para fotos', 'Productos profesionales de élite']
+      }
+    };
+
+    // FUNCIÓN PRINCIPAL: OPEN QUICK VIEW
+    function openQuickView(id) {
+      const data = quickViewData[id];
+      if (!data) {
+        console.warn('No se encontró datos para el id:', id);
+        return;
+      }
+
+      // Llenar imagen
+      document.getElementById('qv-image').src = data.imagen;
+      document.getElementById('qv-image').alt = data.titulo;
+
+      // Llenar tag
+      document.getElementById('qv-tag').textContent = data.tag;
+
+      // Mostrar badge de urgencia para promos
+      const urgencyBadge = document.getElementById('qv-urgency');
+      const urgencyText = document.getElementById('qv-urgency-text');
+      if (data.tipo === 'promo') {
+        urgencyBadge.style.display = 'flex';
+        urgencyText.textContent = '¡Solo por tiempo limitado!';
+      } else {
+        urgencyBadge.style.display = 'none';
+      }
+
+      // Llenar título y subtitulo
+      document.getElementById('qv-title').textContent = data.titulo;
+      document.getElementById('qv-subtitle').textContent = data.subtitle;
+
+      // Llenar precios
+      document.getElementById('qv-precio').textContent = 'BOB ' + data.precio;
+
+      if (data.precioOld) {
+        document.getElementById('qv-precio-old').textContent = 'BOB ' + data.precioOld;
+        document.getElementById('qv-precio-old').style.display = 'inline';
+        const descuento = Math.round((1 - data.precio / data.precioOld) * 100);
+        document.getElementById('qv-discount').textContent = '-' + descuento + '%';
+        document.getElementById('qv-discount').style.display = 'inline';
+      } else {
+        document.getElementById('qv-precio-old').style.display = 'none';
+        document.getElementById('qv-discount').style.display = 'none';
+      }
+
+      // Llenar duración
+      document.getElementById('qv-duracion').textContent = data.duracion;
+
+      // Llenar highlights (mini cards con características)
+      const highlightsContainer = document.getElementById('qv-highlights');
+      if (data.highlights && data.highlights.length > 0) {
+        highlightsContainer.innerHTML = data.highlights.map(h => `
+          <div class="quickview-highlight-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${h.icon}</svg>
+            <span>${h.text}</span>
+          </div>
+        `).join('');
+        highlightsContainer.style.display = 'grid';
+      } else {
+        highlightsContainer.style.display = 'none';
+      }
+
+      // Llenar features (servicios incluidos)
+      const featuresList = document.getElementById('qv-features-list');
+      featuresList.innerHTML = data.features.map(f => '<li>' + f + '</li>').join('');
+
+      // Llenar descripción
+      document.getElementById('qv-descripcion').textContent = data.descripcion;
+
+      // Guardar referencia de datos en el modal para el botón reservar
+      const modal = document.getElementById('modalQuickView');
+      modal.dataset.currentData = JSON.stringify(data);
+
+      // Configurar botón de reserva
+      const btnReservar = document.getElementById('qv-btn-reserve');
+      btnReservar.onclick = function() {
+        agregarCarritoServiciosFromQuickView(data);
+      };
+
+      // Mostrar el modal
+      const modalInstance = new bootstrap.Modal(document.getElementById('modalQuickView'));
+      modalInstance.show();
+    }
+
+    // Función para agregar servicio desde Quick View al carrito de servicios
+    function agregarCarritoServiciosFromQuickView(data) {
+      const yaExiste = carritoServicios.some(s => s.nombre === data.titulo);
+      if (!yaExiste) {
+        carritoServicios.push({
+          id: data.titulo.toLowerCase().replace(/\s+/g, '-'),
+          nombre: data.titulo,
+          precio: data.precio,
+          duracion: Number(data.duracion.replace(/[^\d]/g, ''))
+        });
+      }
+
+      if (typeof actualizarVistaCarrito === 'function') {
+        actualizarVistaCarrito();
+      }
+
+      bootstrap.Modal.getInstance(document.getElementById('modalQuickView')).hide();
+      setTimeout(() => {
+        bootstrap.Modal.getInstance(document.getElementById('modalCarrito')).show();
+      }, 300);
+    }
+  </script>
+
 </body>
 
 </html>

@@ -1,8 +1,3 @@
-// ============================================================
-//  M BEAUTY STUDIO — Capa de Datos Dinámicos (Google Sheets)
-//  Centraliza toda la comunicación con el Apps Script.
-//  Si Sheets falla, recurre a los datos de respaldo en config.js
-// ============================================================
 
 class DataStore {
 

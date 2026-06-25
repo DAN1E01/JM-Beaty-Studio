@@ -5,7 +5,7 @@
 class GeneradorQR {
 
   // ----------------------------------------------------------
-  // Generar QR (datos de transferencia o resumen de reserva)
+  // Generar QR
   // ----------------------------------------------------------
   static generar(contenido, containerId, opciones = {}) {
     const container = document.getElementById(containerId);
