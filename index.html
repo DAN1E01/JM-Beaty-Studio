@@ -30,7 +30,11 @@
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d84b7f" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
 
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -137,11 +141,12 @@
       <p class="text-muted mb-5">Descubre todo lo que tenemos para realzar tu belleza</p>
 
       <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-4">
+        <!-- Promo 1: Maquillaje Profesional -->
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden cursor-pointer" 
                onclick="openQuickView('promo-1')">
             <div class="row g-0 h-100 bg-light-yellow">
-              <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
+              <div class="col-12 col-lg-6 p-3 p-md-4 d-flex flex-column justify-content-between text-start">
                 <div>
                   <img src="icons/Hair-Dryer--Streamline-Flex.png" alt="Icon" width="30" class="mb-2">
                   <h5 class="fw-bold">Maquillaje Profesional</h5>
@@ -152,31 +157,34 @@
                     <span class="text-decoration-line-through text-muted small">BOB 150</span>
                     <span class="fw-bold text-danger">BOB 120</span>
                   </div>
-                  <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 90
-                    Minutos</small>
+                  <small class="text-muted d-block mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg> 90 Minutos</small>
                   <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-1" data-nombre="Maquillaje Profesional" data-precio="120" data-duracion="90" onclick="event.stopPropagation(); togglePromoCarrito(this);">Reserva tu cita</button>
                 </div>
               </div>
-              <div class="col-6 promo-img" style="background-image: url('img/PeinadosSinFondo.png');"></div>
+              <div class="col-6 col-lg-6 p-0">
+                <img src="img/PeinadosSinFondo.png" alt="Maquillaje Profesional" class="img-fluid w-100 h-100" style="object-fit: cover; object-position: center;">
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+        
+        <!-- Promo 2: Cuidado Facial -->
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden cursor-pointer" 
                onclick="openQuickView({
                  tipo: 'promo',
-                 tag: 'Promoción -20%',
+                 tag: 'Promocion -20%',
                  titulo: 'Cuidado Facial',
                  subtitle: 'Renueva tu piel con tratamientos especiales',
-                 descripcion: 'Tratamiento facial profesional que incluye limpieza profunda, hidratación y técnicas especializadas para dejar tu piel radiante y saludable. Ideal como preparación para eventos especiales.',
+                 descripcion: 'Tratamiento facial profesional que incluye limpieza profunda, hidratacion y tecnicas especializadas para dejar tu piel radiante y saludable.',
                  imagen: 'img/promo2.png',
                  precio: 200,
                  precioOld: 250,
                  duracion: '60 Minutos',
-                 features: ['Limpieza facial profunda', 'Exfoliación profesional', 'Hidratación intensiva', 'Masaje facial relajante', 'Aplicación de mascarilla']
+                 features: ['Limpieza facial profunda', 'Exfoliacion profesional', 'Hidratacion intensiva', 'Masaje facial relajante', 'Aplicacion de mascarilla']
                })">
             <div class="row g-0 h-100 bg-light-orange">
-              <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
+              <div class="col-12 col-lg-6 p-3 p-md-4 d-flex flex-column justify-content-between text-start">
                 <div>
                   <img src="icons/Eyes.png" alt="Icon" width="30" class="mb-2">
                   <h5 class="fw-bold">Cuidado Facial</h5>
@@ -187,31 +195,34 @@
                     <span class="text-decoration-line-through text-muted small">BOB 250</span>
                     <span class="fw-bold text-danger">BOB 200</span>
                   </div>
-                  <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 60
-                    Minutos</small>
+                  <small class="text-muted d-block mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg> 60 Minutos</small>
                   <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-2" data-nombre="Cuidado Facial" data-precio="200" data-duracion="60" onclick="event.stopPropagation(); togglePromoCarrito(this);">Reserva tu cita</button>
                 </div>
               </div>
-              <div class="col-6 promo-img" style="background-image: url('img/promo2.png');"></div>
+              <div class="col-6 col-lg-6 p-0">
+                <img src="img/promo2.png" alt="Cuidado Facial" class="img-fluid w-100 h-100" style="object-fit: cover; object-position: center;">
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+        
+        <!-- Promo 3: Tratamientos Corporales -->
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card promo-card border-0 rounded-4 shadow-sm h-100 overflow-hidden cursor-pointer" 
                onclick="openQuickView({
                  tipo: 'promo',
-                 tag: 'Promoción -13%',
+                 tag: 'Promocion -13%',
                  titulo: 'Tratamientos Corporales',
                  subtitle: 'Moldea tu figura con nuestros expertos',
-                 descripcion: 'Tratamientos reductores y моделирующие que ayudan a reducir medidas y mejorar la apariencia de la piel. Incluye técnicas de masaje especializadas y productos de alta eficacia.',
+                 descripcion: 'Tratamientos reductores que ayudan a reducir medidas y mejorar la apariencia de la piel.',
                  imagen: 'img/promocion1.png',
                  precio: 350,
                  precioOld: 400,
                  duracion: '45 Minutos',
-                 features: ['Tratamiento reductor', 'Drenaje linfático', 'Masaje моделирующий', 'Aplicación de productos reductores', 'Asesoría nutricional básica']
+                 features: ['Tratamiento reductor', 'Drenaje linfatico', 'Masaje reductor', 'Aplicacion de productos reductores', 'Asesoria nutricional basica']
                })">
             <div class="row g-0 h-100 bg-light-green">
-              <div class="col-6 p-4 d-flex flex-column justify-content-between text-start">
+              <div class="col-12 col-lg-6 p-3 p-md-4 d-flex flex-column justify-content-between text-start">
                 <div>
                   <img src="icons/Lipstick--Streamline-Flex.png" alt="Icon" width="30" class="mb-2">
                   <h5 class="fw-bold">Tratamientos Corporales</h5>
@@ -222,12 +233,13 @@
                     <span class="text-decoration-line-through text-muted small">BOB 400</span>
                     <span class="fw-bold text-danger">BOB 350</span>
                   </div>
-                  <small class="text-muted d-block mb-3"><img src="icons/clock-hour-11.png" width="14"> 45
-                    Minutos</small>
+                  <small class="text-muted d-block mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg> 45 Minutos</small>
                   <button type="button" class="btn btn-sm btn-primary-pink rounded-pill w-100 btn-agregar-promo" data-id="promo-3" data-nombre="Tratamientos Corporales" data-precio="350" data-duracion="45" onclick="event.stopPropagation(); togglePromoCarrito(this);">Reserva tu cita</button>
                 </div>
               </div>
-              <div class="col-6 promo-img" style="background-image: url('img/promocion1.png');"></div>
+              <div class="col-6 col-lg-6 p-0">
+                <img src="img/promocion1.png" alt="Tratamientos Corporales" class="img-fluid w-100 h-100" style="object-fit: cover; object-position: center;">
+              </div>
             </div>
           </div>
         </div>
